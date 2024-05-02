@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(244, 244, 244);
+}
+
+.imgContainer {
+    background-color: rgb(3, 62, 122);
+    padding: 220px 30px 120px 30px;
+    position: relative;
+    text-align: center;
+}
+
+.backgroundImg::after {
+    content: "";
+    background-image: url(../img/south/sur-img.jpeg);
+    background-size: cover;
+    background-position: 15% 15%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 87%;
+    position: absolute;
+    top: 13%;
+    left: 0;
+    opacity: 0.3;
+}
+
+.headerTitle {
+    font-size: 80px;
+    font-weight: 200;
+    color: rgb(248, 238, 226);
+}
+
+.headerText {
+    color: rgba(255, 255, 255, 1);
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.bold {
+    font-weight: 800;
+    color: rgb(248, 238, 226);
+}
+
+.recipesBtnContainer{
+padding: 25px 30px;
+background-color: rgb(255, 255, 255);
+text-align: center;
+}
+
+.recipesBtn {
+    display: inline-block;
+    padding: 13px;
+    color: #ffffff;
+    border: 2px solid #3E4042;
+    background-color: #3E4042;
+    border-radius: 50px;
+}
+
+article {
+    max-width: 450px;
+}
+
+article img {
+    width: 450px;
+    height: 260px;
+}
+
+.boxContainer {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 50px 130px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.prueba {
+    margin: 40px;
+}
+
+.foodBox {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 10px 35px 30px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.foodBox:hover {
+    box-shadow: 10px 45px 40px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    /* Levantar un poco de la pantalla */
+    transition: all 0.5s ease;
+}
+
+.textBox {
+    padding: 30px 40px 30px 40px;
+}
+
+.textTitle {
+    font-size: 30px;
+}
+
+.textDescription {
+    font-size: 25px;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centra verticalmente el modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

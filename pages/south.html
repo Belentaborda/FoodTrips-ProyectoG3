@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/south.css">
+    <link rel="shortcut icon" href="../img/foodtrips-logo.ico" type="image/x-icon">
+    <title>FoodTrips</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div>
+                <a href="../index.html">
+                    <img src="../img/foodtrips-logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <div>
+                <ul>
+                    <li class="navList Norte"><a href="">NORTE</a></li>
+                    <li class="navList Este"><a href="">ESTE</a></li>
+                    <li class="navList Oeste"><a href="">OESTE</a></li>
+                    <li class="navList Sur"><a href="./south.html">SUR</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="imgContainer">
+            <div class="backgroundImg"></div>
+            <div>
+                <h1 class="headerTitle"><span class="bold">Sur</span> Argentino</h1>
+            </div>
+            <div class="headerText">
+                <p>De la enorme estepa desértica a los frondosos bosques centenarios bañados con lagos de origen
+                    glaciar. De la interminable costa oceánica, límite natural del desierto, a esa línea longitudinal
+                    que tiene a los Andes como testigos. Interminable a la vista e inabarcable para el resto de los
+                    sentidos, llegar hasta esta región, supone alcanzar ese destino deseado por cualquier viajero que se
+                    precie.
+                    Sus sabores por supuesto están a la altura de lo que regala el paisaje.</p>
+            </div>
+        </section>
+        <section>
+            <div class="recipesBtnContainer">
+                <h3 class="recipesBtn">TODAS LAS RECETAS</h3>
+            </div>
+        </section>
+        <section class="boxContainer">
+            <article class="prueba">
+                <div class="foodBox" onclick="openModal('modal1')">
+                    <img src="../img/south/Costillar-de-cordero-a-la-salvia.jpg" alt="">
+                    <div class="textBox">
+                        <h2 class="textTitle">Costillar de cordero</h2>
+                        <p class="textDescription"> a la salvia, en reducción de vino tinto con base de cebolla y ajo
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="prueba">
+                <div class="foodBox" onclick="openModal('modal2')">
+                    <img src="../img/south/Timbal-centolla-promar-recetas.jpg" alt="">
+                    <div class="textBox">
+                        <h2 class="textTitle">Timbal de centolla</h2>
+                        <p class="textDescription"> con vegetales al limón y pimienta negra</p>
+                    </div>
+                </div>
+            </article>
+            <article class="prueba">
+                <div class="foodBox" onclick="openModal('modal3')">
+                    <img src="../img/south/Creme-brulee-con-Calafate.jpeg" alt="">
+                    <div class="textBox">
+                        <h2 class="textTitle">Creme brulée</h2>
+                        <p class="textDescription"> con frutos de Calafate y salsa de frutos rojos y hojas de menta</p>
+                    </div>
+                </div>
+            </article>
+            <article class="prueba">
+                <div class="foodBox" onclick="openModal('modal4')">
+                    <img src="../img/south/Llama-al-vino-tinto.jpg" alt="">
+                    <div class="textBox">
+                        <h2 class="textTitle">Llama al vino tinto</h2>
+                        <p class="textDescription"> acompañada con quinoa, vegetales salteados y carotes asados</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Título del modal 1</h2>
+            <p>Contenido del modal...</p>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Título del modal 2</h2>
+            <p>Contenido del modal...</p>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Título del modal 3</h2>
+            <p>Contenido del modal...</p>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Título del modal 4</h2>
+            <p>Contenido del modal...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_main">
+            <div class="footer_main_codoacodo">
+                <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40">
+                    <img alt="Agencia de Aprendizaje a lo largo de la vida" src="../img/LogoCODOACODO.png">
+                    <p class="logo-text">Agencia de Aprendizaje <br> a lo largo de la vida</p>
+                </a>
+            </div>
+            <div class="footer_links">
+                <div class="footer_links_col">
+                    <h4 class="footer_links_title">Las Regiones</h4>
+                    <ul class="footer_links_list">
+                        <!-- en cada href poner las rutas de cada region -->
+                        <li class="Norte"><a href="">NORTE</a></li>
+                        <li class="Este"><a href="">ESTE</a></li>
+                        <li class="Oeste"><a href="">OESTE</a></li>
+                        <li class="Sur"><a href="./south.html">SUR</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links_col">
+                    <div class="footer_links_social">
+                        <h4 class="footer_links_title">Social</h4>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img alt="Facebook" src="../img/logoFacebook.png">
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img alt="Instragram" src="../img/logoInstagram.png">
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <img alt="Twitter" src="../img/logoTwitter.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+        // Cierra el modal cuando se hace clic fuera de él
+        window.onclick = function (event) {
+            var modals = document.querySelectorAll(".modal");
+            modals.forEach(function (modal) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
