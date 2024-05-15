@@ -25,7 +25,7 @@
 }
 
 .region_top {
-    background-image: url(./Norte1.png); /* Ruta de la imagen de fondo */
+    background-image: url(../img/Norte/Norte1.png); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajustar imagen para cubrir completamente */
     font-family: "Roboto", Helvetica, "Segoe UI", sans-serif;
     z-index: 1;
