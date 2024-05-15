@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="./img/foodtrips-logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/foodtrips-logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>FoodTrips</title>
 </head>
 
@@ -14,19 +24,26 @@
     <header>
         <nav class="navbar">
             <div>
-                <a href="./index.html">
+                <a href="./index.html" class="logoBox">
                     <img src="./img/foodtrips-logo.png" alt="logo" class="logo">
+                    <h1>FoodTrips</h1>
                 </a>
             </div>
             <div>
-                <ul>
+                <ul class="navbarListBoxes">
                     <li class="navList Norte"><a href="">NORTE</a></li>
                     <li class="navList Este"><a href="">ESTE</a></li>
-                    <li class="navList Oeste"><a href="">OESTE</a></li>
-                    <li class="navList Sur"><a href="./pages/south.html">SUR</a></li>
+                    <li class="navList Oeste"><a href="../pages/west.html">OESTE</a></li>
+                    <li class="navList Sur"><a href="../pages/south.html">SUR</a></li>
                 </ul>
             </div>
+            <div class="lenguage">
+                <img src="./img/globe.png" alt="lenguaje" width="40px">
+                <span>ES</span>
+            </div>
         </nav>
+
+
     </header>
 
     <main>
@@ -51,42 +68,106 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer_main">
-            <div class="footer_main_codoacodo">
-                <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40" target="_blank">
-                    <img alt="Agencia de Aprendizaje a lo largo de la vida" src="./img/LogoCODOACODO.png">
-                    <p class="logo-text">Agencia de Aprendizaje <br> a lo largo de la vida</p>
-                </a>
-            </div>
-            <div class="footer_links">
-                <div class="footer_links_col">
-                    <h4 class="footer_links_title">Las Regiones</h4>
-                    <ul class="footer_links_list">
-                        <!-- en cada href poner las rutas de cada region -->
-                        <li class="Norte"><a href="">NORTE</a></li>
-                        <li class="Este"><a href="">ESTE</a></li>
-                        <li class="Oeste"><a href="">OESTE</a></li>
-                        <li class="Sur"><a href="./pages/south.html">SUR</a></li>
-                    </ul>
+    <footer id="footer">
+        <div class="footer_logos">
+          <div class="footer__logos">
+              <article>
+                  <h2>Datos de contacto</h2>
+                </article>
+            <form id="contactForm" class="contact-form">
+              <div class="form-columns">
+                <div class="form-column">
+                  <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+                  </div>
+                  <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico"required />
+                  </div>
+                  <div>
+                    <label for="category">Categoría:</label>
+                    <select id="category" name="category" required>
+                      <option value="">Seleccione una categoría</option>
+                      <option value="consulta">Consulta</option>
+                      <option value="trabajo">Trabaja con nosotros</option>
+                      <option value="publicar">Quiero publicar un plato</option>
+                      <option value="restaurante">Quiero publicar mi restaurante</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="footer_links_col">
-                    <div class="footer_links_social">
-                        <h4 class="footer_links_title">Social</h4>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img alt="Facebook" src="./img/logoFacebook.png">
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img alt="Instragram" src="./img/logoInstagram.png">
-                        </a>
-                        <a href="https://twitter.com/" target="_blank">
-                            <img alt="Twitter" src="./img/logoTwitter.png">
-                        </a>
-                    </div>
+                <div class="form-column">
+                  <div class="form-colum-right">
+                    <label for="message">Mensaje:</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Dejanos tu mensaje..."
+                      required
+                    ></textarea>
+                  </div>
+  
+                  <div class="form-colum-right">
+                    <label for="upload">Subir archivo:</label>
+                    <input type="file" id="upload" name="upload" />
+                  </div>
+                  <div class="form-colum-right">
+                    <label for="agree">Acepto los términos y condiciones:</label>
+                    <input type="checkbox" id="agree" name="agree" required />
+                  </div>
                 </div>
-            </div>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
         </div>
-    </footer>
+        <div class="footer_main">
+          <div class="footer_main_codoacodo">
+            <a
+              class="logo-text-link"
+              href="https://buenosaires.gob.ar/educacion/codo-codo-40"
+              target="_blank"
+            >
+              <img
+                alt="Agencia de Aprendizaje a lo largo de la vida"
+                src="./img/LogoCODOACODO.png"
+              />
+              <p class="logo-text">
+                Agencia de Aprendizaje <br />
+                a lo largo de la vida
+              </p>
+            </a>
+          </div>
+          <div class="footer_links">
+            <div class="footer_links_col">
+              <h4 class="footer_links_title">Las Regiones</h4>
+              <ul class="footer_links_list">
+                <!-- en cada href poner las rutas de cada region -->
+                <li class="Norte"><a href="./norte.html">NORTE</a></li>
+                <li class="Este"><a href="">ESTE</a></li>
+                <li class="Oeste"><a href="../pages/west.html">OESTE</a></li>
+                <li class="Sur"><a href="./pages/south.html">SUR</a></li>
+              </ul>
+            </div>
+            <div class="footer_links_col">
+              <div class="footer_links_social">
+                <h4 class="footer_links_title">Social</h4>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img alt="Facebook" src="./img/logoFacebook.png" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img alt="Instragram" src="./img/logoInstagram.png" />
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                  <img alt="Twitter" src="./img/logoTwitter.png" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="index.js"></script>
 
 </body>
 
