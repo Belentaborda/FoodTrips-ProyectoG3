@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -62,7 +63,9 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover {
-    color: #7d8e39;
+
+    color: #21be36;
+
 }
 
 .navbarListBoxes .Norte a {
@@ -78,7 +81,8 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste a {
-    color: #7d8e39;
+    color: #21be36;
+
 }
 
 .navbarListBoxes .navList a:hover {
@@ -123,7 +127,9 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover::after {
-    background-color: #7d8e39;
+
+    background-color: #21be36;
+
 }
 
 li a {
@@ -162,7 +168,6 @@ li a {
 
     .lenguage {
         display: none;
-        width: 100%;
     }
 }
 
@@ -182,6 +187,21 @@ li a {
         display: none;
     }
 }
+
+    .navbarListBoxes {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .navList {
+        margin: 10px;
+    }
+
+    .logoBox h1 {
+        display: none;
+    }
+
 
 /*--------------------Footer------------------*/
 .footer__logos {
