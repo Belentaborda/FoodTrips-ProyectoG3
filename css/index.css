@@ -180,6 +180,21 @@ li a {
         display: none;
     }
 }
+
+    .navbarListBoxes {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .navList {
+        margin: 10px;
+    }
+
+    .logoBox h1 {
+        display: none;
+    }
+}
 /*--------------------Footer------------------*/
 .footer__logos {
     background-color:#d4cfb9;
@@ -300,6 +315,7 @@ li a {
 }
 
 .footer_main {
+    font-family: "Roboto", sans-serif;
     width: 99.9%;
     padding: 25px;
     background: #3E4042 url(/assets/footer-bg-656c1a7c66b412ea2ac091559b06bebc1ff33a3f71e66995488c637670a325bc.svg) 100% 50% no-repeat;
