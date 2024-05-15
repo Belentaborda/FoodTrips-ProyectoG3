@@ -1,22 +1,13 @@
-/*const form = document.getElementById("contactForm");
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
+  var category = document.getElementById('category').value;
+  var agree = document.getElementById('agree').checked;
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("Nombre");
-  const email = document.getElementById("Email");
-  const message = document.getElementById("Mensaje");
-  const interest = document.getElementById("Interes");
-  const newsletter = document.getElementById("Newsletter");
-  const profilePic = document.getElementById("Imagen");
-
-  if (!name.value || !email.value || !message.value || !interest.value || !newsletter.checked || !profilePic.value) {
-    alert("Por favor, complete todos los campos obligatorios.");
-    return;
+  if (!name || !email || !message || !category || !agree) {
+    alert('Por favor complete todos los campos obligatorios.');
+    event.preventDefault(); // Evitar que se envíe el formulario
   }
-
-  form.submit();
-
-  
-});*/
+});
 
