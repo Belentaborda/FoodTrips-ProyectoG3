@@ -44,65 +44,130 @@
         </nav>
     </header>
 
+
     <main>
-        <h1>Bienvenido a FoodTrips</h1>
-        <section>
-            <h2>Presentación del sitio</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet est commodi ea modi totam consequatur
-                perferendis, quae quia, sint quaerat voluptas accusamus aliquid cumque dolor atque, dolore beatae saepe
-                doloribus!</p>
-        </section>
-        <section>
-            <article>
-                <h2>Quiénes somos</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure exercitationem in assumenda
-                    reprehenderit
-                    voluptas? Dolore doloremque labore delectus? Harum consectetur repudiandae est a pariatur voluptatum
-                    tenetur beatae, dolorum ut? Quidem.</p>
-            </article>
-            <article>
-                <h2>Datos de contacto personales y linkedin</h2>
-            </article>
-        </section>
+      <h1>Bienvenido a FoodTrips</h1>
+      <section>
+        <h2>Presentación del sitio</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet est
+          commodi ea modi totam consequatur perferendis, quae quia, sint quaerat
+          voluptas accusamus aliquid cumque dolor atque, dolore beatae saepe
+          doloribus!
+        </p>
+      </section>
+      <section>
+        <article>
+          <h2>Quiénes somos</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+            exercitationem in assumenda reprehenderit voluptas? Dolore
+            doloremque labore delectus? Harum consectetur repudiandae est a
+            pariatur voluptatum tenetur beatae, dolorum ut? Quidem.
+          </p>
+        </article>
+      </section>
     </main>
 
-    <footer>
-        <div class="footer_main">
-            <div class="footer_main_codoacodo">
-                <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40">
-                    <img alt="Agencia de Aprendizaje a lo largo de la vida" src="./img/LogoCODOACODO.png">
-                    <p class="logo-text">Agencia de Aprendizaje <br> a lo largo de la vida</p>
-                </a>
-            </div>
-            <div class="footer_links">
-                <div class="footer_links_col">
-                    <h4 class="footer_links_title">Las Regiones</h4>
-                    <ul class="footer_links_list">
-                        <!-- en cada href poner las rutas de cada region -->
-                        <li class="Norte"><a href="">NORTE</a></li>
-                        <li class="Este"><a href="">ESTE</a></li>
-                        <li class="Oeste"><a href="">OESTE</a></li>
-                        <li class="Sur"><a href="./pages/south.html">SUR</a></li>
-                    </ul>
+    <footer id="footer">
+      <div class="footer_logos">
+        <div class="footer__logos">
+            <article>
+                <h2>Datos de contacto</h2>
+              </article>
+          <form id="contactForm" class="contact-form">
+            <div class="form-columns">
+              <div class="form-column">
+                <div>
+                  <label for="name">Nombre:</label>
+                  <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
                 </div>
-                <div class="footer_links_col">
-                    <div class="footer_links_social">
-                        <h4 class="footer_links_title">Social</h4>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img alt="Facebook" src="./img/logoFacebook.png">
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img alt="Instragram" src="./img/logoInstagram.png">
-                        </a>
-                        <a href="https://twitter.com/" target="_blank">
-                            <img alt="Twitter" src="./img/logoTwitter.png">
-                        </a>
-                    </div>
+                <div>
+                  <label for="email">Correo electrónico:</label>
+                  <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico"required />
                 </div>
+                <div>
+                  <label for="category">Categoría:</label>
+                  <select id="category" name="category" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="trabajo">Trabaja con nosotros</option>
+                    <option value="publicar">Quiero publicar un plato</option>
+                    <option value="restaurante">Quiero publicar mi restaurante</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-column">
+                <div class="form-colum-right">
+                  <label for="message">Mensaje:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Dejanos tu mensaje..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-colum-right">
+                  <label for="upload">Subir archivo:</label>
+                  <input type="file" id="upload" name="upload" />
+                </div>
+                <div class="form-colum-right">
+                  <label for="agree">Acepto los términos y condiciones:</label>
+                  <input type="checkbox" id="agree" name="agree" required />
+                </div>
+              </div>
             </div>
+            <button type="submit">Enviar</button>
+          </form>
         </div>
+      </div>
+      <div class="footer_main">
+        <div class="footer_main_codoacodo">
+          <a
+            class="logo-text-link"
+            href="https://buenosaires.gob.ar/educacion/codo-codo-40"
+            target="_blank"
+          >
+            <img
+              alt="Agencia de Aprendizaje a lo largo de la vida"
+              src="./img/LogoCODOACODO.png"
+            />
+            <p class="logo-text">
+              Agencia de Aprendizaje <br />
+              a lo largo de la vida
+            </p>
+          </a>
+        </div>
+        <div class="footer_links">
+          <div class="footer_links_col">
+            <h4 class="footer_links_title">Las Regiones</h4>
+            <ul class="footer_links_list">
+              <!-- en cada href poner las rutas de cada region -->
+              <li class="Norte"><a href="./norte.html">NORTE</a></li>
+              <li class="Este"><a href="">ESTE</a></li>
+              <li class="Oeste"><a href="">OESTE</a></li>
+              <li class="Sur"><a href="./pages/south.html">SUR</a></li>
+            </ul>
+          </div>
+          <div class="footer_links_col">
+            <div class="footer_links_social">
+              <h4 class="footer_links_title">Social</h4>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img alt="Facebook" src="./img/logoFacebook.png" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img alt="Instragram" src="./img/logoInstagram.png" />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img alt="Twitter" src="./img/logoTwitter.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
