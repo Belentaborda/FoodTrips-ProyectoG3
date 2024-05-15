@@ -484,11 +484,11 @@ ul {
 }
 
 .Oeste a {
-    color: #7d8e39;
+    color:#21be36;
 }
 
 .Oeste a:visited {
-    color: #7d8e39;
+    color: #21be36;
 }
 
 .Sur a {
@@ -552,4 +552,89 @@ ul {
     position: relative;
     top: 1px;
     margin-right: 5px
+}
+/*----------------------------------SLIDER-------------------------------------*/
+
+
+.photo-slider {
+    margin: auto;
+    background-color: currentColor;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.titulo-slider{
+    font-family: "Roboto Slab", serif;
+    color: #fffcf7;
+    font-weight: 300;
+    letter-spacing: .03rem;
+    line-height: 125%;
+    font-size: 5.2rem;
+    opacity: 100%;
+    position: absolute;
+    left: 18.3%;
+    bottom: 46%;
+} 
+
+#logo-home{
+    font-size: 7rem;
+
+}
+
+.txt-slider{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6),#48483abd, rgba(7, 8, 1, 0.6) );
+    background-blend-mode: multiply;
+    opacity: 90%;
+}
+
+.img-slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+}
+
+.img-slider img{
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    object-fit:cover;
+}
+
+.img-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.button-slider{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+}
+
+.button-slider a{
+    width: 1rem;
+    height: 1rem;
+    background-color: none;
+    border-radius: 50%;
+    outline-style: solid;
+    outline-color: antiquewhite;
+}
+
+.button-slider :hover{
+    background-color: antiquewhite;
+    opacity: 80%;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;}
 }
