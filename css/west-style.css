@@ -1,12 +1,6 @@
-
 * {
     margin: 0px;
     box-sizing: border-box;
-}
-
-body {
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
 }
 
 .logo {
@@ -63,9 +57,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover {
-
-    color: #21be36;
-
+    color: #7d8e39;
 }
 
 .navbarListBoxes .Norte a {
@@ -81,8 +73,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste a {
-    color: #21be36;
-
+    color: #7d8e39;
 }
 
 .navbarListBoxes .navList a:hover {
@@ -127,9 +118,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover::after {
-
-    background-color: #21be36;
-
+    background-color: #7d8e39;
 }
 
 li a {
@@ -164,172 +153,322 @@ li a {
 }
 
 
-@media screen and (max-width: 768px) {
+/*--------------------Body------------------*/
 
-    .lenguage {
-        display: none;
-    }
+body{
+    position: relative;
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+    background-color: rgb(241, 243, 244);
 }
 
-@media screen and (max-width: 710px) {
-
-    .navbarListBoxes {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 16px;
-    }
-
-    .navList {
-        margin: 10px;
-    }
-
-    .logoBox h1 {
-        display: none;
-    }
+.fotoWest {
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: linear-gradient(to bottom, rgba(48, 59, 0, 0.60), rgba(48, 59, 0, 0.6)), url("../img/Oeste/oeste-mendoza-1920x700.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-    .navbarListBoxes {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 16px;
-    }
+.fotoTxt {
+    margin-top: 7em;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    width: 45%;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
 
-    .navList {
-        margin: 10px;
-    }
+h1.titulo-img{
+    padding-bottom: 40px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    font-size: 4.5rem;
+    opacity: 85%;
+}
 
-    .logoBox h1 {
-        display: none;
-    }
+.material-symbols-outlined{
+    padding-right: 5px;
+}
+
+.ver-fotos{
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    letter-spacing: .07rem;
+    font-size: .7rem;
+    color:#ffffff;
+    background-color: rgb(22, 22, 22);
+    padding: .4em 1em;
+    display: inline-flex;
+    align-items: center;  
+    border: none;  
+    border-radius: 20px;
+    opacity: 50%;
+    outline: 0;
+    font-weight: 400;
+    -webkit-transition: .1s;
+    transition: .1s;
+}
+
+.navreg{
+    position: relative;
+    background-color: rgb(167, 179, 118);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ver-mapa{
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    font-size: .8rem;
+    color:#c0c4bc;
+    background-color: rgb(102, 106, 82);
+    padding: .6em 1em;
+    border-radius: 20px;
+    display: block;
+    opacity: 80%;
+    font-weight: 400;
+    transition: background-color .3s;
+}
+
+.modal{
+    position: fixed;
+    z-index: 10; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .2s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal-show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .2s;
+}
+
+.modal-container{
+    margin: auto;
+    width: 90%;
+    max-width: 50%;
+    max-height: 90%;
+    border-radius: 0px 0px 6px 6px;
+    padding: 1.5em;
+    background: linear-gradient(to top, #1c1c1cbd, #414141bd);
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modal-img{
+    max-width: 300px;
+}
+
+.modal-title{
+    font-size: 1.5rem;
+    color: #cfcfcf;
+}
+
+.modal-paragraph{
+    margin-bottom: 10px;
+    color: #cfcfcf;
+}
+
+
+.modal-close{
+    text-decoration: none;
+    color:#ffffff;
+    padding: 1em 3em;
+    display: inline-block;
+    justify-content: right;
+    font-weight: 400;
+    transition: background-color .3s;
+}
+
+.modal-close:hover{
+    color: rgb(125, 142, 57);
+    background-color: #ffffff;
+}  
+
+.map{
+    position: fixed; 
+    z-index: 10;   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    background-color: #919191bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .2s;  
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+} 
+
+.show-map{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    transform: translateY(0);
+    --transition: transform .8s .2s;
+}  
+
+.container-map{
+    margin: auto;
+    width: 15%;
+    max-width: 350px;
+    max-height: 90%;
+    padding: 1.5em;
+    background-color: #5a5a5a;
+    opacity: 100%;
+    display: grid;
+    grid-auto-columns: 100%;
+    gap: 1em;
+    place-items: center;
+    transform: var(--transform);
+    transition: var(--transition); 
+}
+
+.container-map path{
+    fill:#5a5a5a;
+    stroke:rgb(220, 220, 220);
+    stroke-width: 2px;
+}
+
+.container-map :hover{
+    fill: rgb(125, 142, 57);
+}
+ 
+
+.map-region{
+    font-size: 1rem;
+}
+
+.map-nombre{
+    font-size: 1.5rem;
+}
+
+.paragraph-map{
+    margin-bottom: 10px;
+}
+
+.close-map{
+    text-decoration: none;
+    color:#ffffff;
+    background-color: rgb(125, 142, 57);
+    padding: 1em 3em;
+    border: 2px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 400;
+    transition: background-color .3s;
+} 
+
+.close-map :hover{
+    color: rgb(125, 142, 57);
+    background-color: #ffffff;
+}   
+
+.container-recetas{
+    width: 100%;
+    max-width: 1150px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #40413d;
+}
+
+.recetas{
+    width: 35%;
+    background: #ffffff;    
+    display: block;   
+    justify-content: center;
+    margin: 40px auto;
+    text-align: left;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 10px 35px 30px 0px rgba(0, 0, 0, 0.2);
+    transition: all 300ms;
+    position: relative;
+    line-height: 30px;  
+}
+
+.recetas:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recetas img{
+    width: 100%;
+}
+
+.receta{
+    text-decoration: none;
+    color: #40413d;
+}
+
+.receta img{
+    overflow: hidden;
+    z-index: 10;
+}
+
+.receta-title{
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 20px 0 0 30px;
+}
+
+.receta-txt{
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 0px 0 0 30px;
+}
+
+.receta-provincia{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 15px 0 20px 30px;
+    color:rgb(179, 179, 179)
+}
 
 
 /*--------------------Footer------------------*/
-.footer__logos {
-    background-color:#d4cfb9;
-    padding: 30px;
-  }
 
-  .footer__logos h2{
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
-    color: rgb(88, 81, 81);
-    margin-left: 40%;
-  }
-
-  .footer__logos article{
-    color: rgb(31, 19, 19);
-    font-size: 1.2em;
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
-    margin-bottom: 20px;
-    margin-right: 5%;
-  }
-  
-  .contact-form {
-    color: white; 
-    font-size: 1.2em;
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
-    display: flex;
-    flex-direction: column; /* Alinear elementos en columna */
-    align-items: center;
-  }
-  
-  .form-columns {
-    display: flex;
-    justify-content: space-between; /* Distribuir elementos en dos columnas */
-    width: 100%; /* Ancho completo */
-    width: calc(60% - 10px); /* Ancho de cada columna (50% del contenedor menos espacio entre columnas) */
-    margin-right: 10%; /* Espacio entre las columnas */
-    
-  }
-  .form-column {
-    margin-right: 200px; /* Aumenta el espacio entre las columnas */
-    flex: 1; /* Hace que cada columna ocupe el mismo espacio dentro del contenedor flex */
-}
-.form-colum-right{
-    width:150%;
-}
-
-  .form-column div {
-    margin-bottom: 10px;
-  }
-  
-  .contact-form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  .form-colum-right{
-    margin-left: 100px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form select,
-  .contact-form button {
-    width: 150%;
-    padding: 10px;
-    font-size: 14px; /* Tamaño de fuente reducido */
-    box-sizing: border-box;
-    border-radius: 5px; 
-    border:none;
-    color: rgb(110, 106, 106);
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif    
-  }
-  .contact-form textarea{
-    width: 100%;
-  }
-
-  .form-column textarea{
-    color: rgb(110, 106, 106);
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
-    font-size: 14px;
-  }
-
-  
-  .contact-form button {
-    width: 40%;
-    padding: 10px 20px;
-    font-size: 14px; 
-    background-color:  #2d2e30;;
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
-    font-size: 1em;  
-    color: #fff;
-    border: none;
-    border-radius: 5px; 
-    cursor: pointer;
-    margin-top: 20px;
-    margin-right: 5%;
-  }
-
-  button:hover {
-    background-color: black;
-}
-.contact-form input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    background-color: #fff;
-    border:none;
-    border-radius: 3px;
-    box-shadow: none;
-}
-.form-colum-right input[type="checkbox"] {
-    display: block;
-    margin: auto;
-    margin-left: 130px;
-    
-}
-
-.form-colum-right input[type="file"] {
-    color: rgb(31, 19, 19);
-    cursor: pointer;
-}
 
 .footer_main {
-    font-family: "Roboto", sans-serif;
     width: 99.9%;
     padding: 25px;
     background: #3E4042 url(/assets/footer-bg-656c1a7c66b412ea2ac091559b06bebc1ff33a3f71e66995488c637670a325bc.svg) 100% 50% no-repeat;
     background-size: 40% auto;
     color: white;
-    position: relative
+    position: relative;
 }
 
 .footer_main::after {
@@ -484,11 +623,11 @@ ul {
 }
 
 .Oeste a {
-    color: #7d8e39;
+    color: rgb(125, 142, 57);
 }
 
 .Oeste a:visited {
-    color: #7d8e39;
+    color: rgb(125, 142, 57);
 }
 
 .Sur a {
