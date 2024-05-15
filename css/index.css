@@ -1,6 +1,12 @@
+
 * {
     margin: 0px;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
 }
 
 .logo {
@@ -9,7 +15,9 @@
 }
 
 .navbar {
+    font-family: "Roboto", sans-serif;
     position: fixed;
+    top: 0%;
     background-color: rgb(230, 230, 230);
     width: 100%;
     height: 90px;
@@ -26,8 +34,97 @@ ul .navList {
 }
 
 .navList {
-    padding: 10px;
-    width: 60px;
+    margin: 30px;
+    font-size: 20px;
+}
+
+.navbarListBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    height: 90px;
+    align-items: center;
+}
+
+.navbarListBoxes .navList a:hover {
+    color: initial;
+}
+
+.navbarListBoxes .Norte:hover {
+    color: #a94c1e;
+}
+
+.navbarListBoxes .Sur:hover {
+    color: #177ce1;
+}
+
+.navbarListBoxes .Este:hover {
+    color: #A4237A;
+}
+
+.navbarListBoxes .Oeste:hover {
+    color: #21be36;
+}
+
+.navbarListBoxes .Norte a {
+    color: #a94c1e;
+}
+
+.navbarListBoxes .Sur a {
+    color: #177ce1;
+}
+
+.navbarListBoxes .Este a {
+    color: #A4237A;
+}
+
+.navbarListBoxes .Oeste a {
+    color: #21be36;
+}
+
+.navbarListBoxes .navList a:hover {
+    color: inherit;
+}
+
+.navbarListBoxes .navList {
+    position: relative;
+    border-bottom: 5px solid transparent;
+}
+
+.navbarListBoxes .navList::after {
+    content: '';
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    transition: height 0.2s ease;
+}
+
+.navbarListBoxes .navList:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.navbarListBoxes .Norte:hover::after {
+    background-color: #a94c1e;
+}
+
+.navbarListBoxes .Sur:hover::after {
+    background-color: #177ce1;
+}
+
+.navbarListBoxes .Este:hover::after {
+    background-color: #A4237A;
+}
+
+.navbarListBoxes .Oeste:hover::after {
+    background-color: #21be36;
 }
 
 li a {
@@ -35,11 +132,190 @@ li a {
     font-weight: 600;
 }
 
+.lenguage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 60px;
+    font-size: 18px;
+    color: #3E4042;
+    cursor: default;
+}
 
+.logoBox {
+    font-display: flex;
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoBox h1 {
+    padding-left: 20px;
+    font-size: 35px;
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    color: #3E4042;
+}
+
+@media screen and (max-width: 768px) {
+
+    .lenguage {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 710px) {
+
+    .navbarListBoxes {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .navList {
+        margin: 10px;
+    }
+
+    .logoBox h1 {
+        display: none;
+    }
+}
+
+    .navbarListBoxes {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .navList {
+        margin: 10px;
+    }
+
+    .logoBox h1 {
+        display: none;
+    }
 /*--------------------Footer------------------*/
+.footer__logos {
+    background-color:#d4cfb9;
+    padding: 30px;
+  }
 
+  .footer__logos h2{
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    color: rgb(88, 81, 81);
+    margin-left: 40%;
+  }
+
+  .footer__logos article{
+    color: rgb(31, 19, 19);
+    font-size: 1.2em;
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    margin-bottom: 20px;
+    margin-right: 5%;
+  }
+  
+  .contact-form {
+    color: white; 
+    font-size: 1.2em;
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center;
+  }
+  
+  .form-columns {
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos en dos columnas */
+    width: 100%; /* Ancho completo */
+    width: calc(60% - 10px); /* Ancho de cada columna (50% del contenedor menos espacio entre columnas) */
+    margin-right: 10%; /* Espacio entre las columnas */
+    
+  }
+  .form-column {
+    margin-right: 200px; /* Aumenta el espacio entre las columnas */
+    flex: 1; /* Hace que cada columna ocupe el mismo espacio dentro del contenedor flex */
+}
+.form-colum-right{
+    width:150%;
+}
+
+  .form-column div {
+    margin-bottom: 10px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-colum-right{
+    margin-left: 100px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select,
+  .contact-form button {
+    width: 150%;
+    padding: 10px;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    box-sizing: border-box;
+    border-radius: 5px; 
+    border:none;
+    color: rgb(110, 106, 106);
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif    
+  }
+  .contact-form textarea{
+    width: 100%;
+  }
+
+  .form-column textarea{
+    color: rgb(110, 106, 106);
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    font-size: 14px;
+  }
+
+  
+  .contact-form button {
+    width: 40%;
+    padding: 10px 20px;
+    font-size: 14px; 
+    background-color:  #2d2e30;;
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    font-size: 1em;  
+    color: #fff;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 5%;
+  }
+
+  button:hover {
+    background-color: black;
+}
+.contact-form input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border:none;
+    border-radius: 3px;
+    box-shadow: none;
+}
+.form-colum-right input[type="checkbox"] {
+    display: block;
+    margin: auto;
+    margin-left: 130px;
+    
+}
+
+.form-colum-right input[type="file"] {
+    color: rgb(31, 19, 19);
+    cursor: pointer;
+}
 
 .footer_main {
+    font-family: "Roboto", sans-serif;
     width: 99.9%;
     padding: 25px;
     background: #3E4042 url(/assets/footer-bg-656c1a7c66b412ea2ac091559b06bebc1ff33a3f71e66995488c637670a325bc.svg) 100% 50% no-repeat;

@@ -4,8 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="./img/foodtrips-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/img/foodtrips-logo.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <title>FoodTrips</title>
 </head>
 
@@ -14,79 +27,172 @@
     <header>
         <nav class="navbar">
             <div>
-                <a href="./index.html">
+                <a href="./index.html" class="logoBox">
                     <img src="./img/foodtrips-logo.png" alt="logo" class="logo">
+                    <h1>FoodTrips</h1>
                 </a>
             </div>
             <div>
-                <ul>
+                <ul class="navbarListBoxes">
                     <li class="navList Norte"><a href="">NORTE</a></li>
-                    <li class="navList Este"><a href="">ESTE</a></li>
+                    <li class="navList Este"><a href="pages/este.html">ESTE</a></li>
                     <li class="navList Oeste"><a href="">OESTE</a></li>
                     <li class="navList Sur"><a href="./pages/south.html">SUR</a></li>
                 </ul>
             </div>
+            <div class="lenguage">
+                <img src="./img/globe.png" alt="lenguaje" width="40px">
+                <span>ES</span>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <h1>Bienvenido a FoodTrips</h1>
-        <section>
-            <h2>Presentación del sitio</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet est commodi ea modi totam consequatur
-                perferendis, quae quia, sint quaerat voluptas accusamus aliquid cumque dolor atque, dolore beatae saepe
-                doloribus!</p>
+    <main class="main">
+        <section class="presentacion">
+            <h2>Un destino apasionante</h2>
+            <p>
+                Viajar unos días a Argentina es sumergirse en un mundo de pasiones.
+                Vivir el fútbol como si estuvieras calentando parar entrar a jugar,
+                bailar tango con mucha sensualidad o, como decimos acá, andar de
+                movida, de plan en plan y de fiesta en fiesta. Pero una de las pasiones
+                turísticas fundamentales en nuestro pais es el de saborear nuestras
+                comidas, los asados y los exquisitos vinos.<br><br>
+                
+                Por eso en este espacio queremos facilitarte y guiarte a los mejores
+                sitios que nuestros 4 puntos cardinales tienen para hacer de tu viaje
+                una experiencia que quieras volver a vivir.<br>
+                Te ofrecemos la experiencia previa en la que ya vas a empezar a
+                distfutar los colores y sabores con solo ver las fotos.<br><br>
+
+                Nuestro objetivo en esta web es que puedas recorrer los distintos puntos
+                cardinales, en los que te vamos a mostrar las recetas de las comidas
+                regionales mas destacadas de nuestro pais, vas a poder saber que
+                ingredientes lleva y cuales son los pasos a seguir para prepararlas,
+                asi como tambien podras ver en qué restaurant se sirve cada comida y
+                una valoracion de puntaje.
+            </p>
         </section>
         <section>
-            <article>
+            <article class="quienes-somos">
                 <h2>Quiénes somos</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure exercitationem in assumenda
-                    reprehenderit
-                    voluptas? Dolore doloremque labore delectus? Harum consectetur repudiandae est a pariatur voluptatum
-                    tenetur beatae, dolorum ut? Quidem.</p>
-            </article>
-            <article>
-                <h2>Datos de contacto personales y linkedin</h2>
+                <p>
+                    Somos un grupo apasionado por nuestro pais y nuestra cultura,
+                    especialmente en nuestras comidas regionales. Nuestro proyecto nacio
+                    como un trabajo de nuestro curso de diseño web, cada uno se enfoco en
+                    una region de Argentina para desarrollarla con su estilo y tambien
+                    siguiendo el estilo en comun para la pagina, finalmente unimos nuestros
+                    trabajos y creamos nuestra web final.<br><br>
+                    Si bien estamos dando nuestros primeros pasos, uno de nuestros pilares
+                    de nuestro proyecto es escalar siempre hacia arriba, agregando nuevas
+                    funcionalidades y creciendo para facilitar al usuario a familiarizarse
+                    con un sitio intuitivo y facil de navegar.<br>
+                    Y si lo desean pueden visitar nuestros perfilesen redes sociales y
+                    linkedin para conocer mas sobre cada uno de nosotros, y un formulario
+                    para que puedan ponerse en contacto.
+                </p>
             </article>
         </section>
     </main>
 
-    <footer>
-        <div class="footer_main">
-            <div class="footer_main_codoacodo">
-                <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40" target="_blank">
-                    <img alt="Agencia de Aprendizaje a lo largo de la vida" src="./img/LogoCODOACODO.png">
-                    <p class="logo-text">Agencia de Aprendizaje <br> a lo largo de la vida</p>
-                </a>
-            </div>
-            <div class="footer_links">
-                <div class="footer_links_col">
-                    <h4 class="footer_links_title">Las Regiones</h4>
-                    <ul class="footer_links_list">
-                        <!-- en cada href poner las rutas de cada region -->
-                        <li class="Norte"><a href="">NORTE</a></li>
-                        <li class="Este"><a href="">ESTE</a></li>
-                        <li class="Oeste"><a href="">OESTE</a></li>
-                        <li class="Sur"><a href="./pages/south.html">SUR</a></li>
-                    </ul>
+    <footer id="footer">
+        <div class="footer_logos">
+          <div class="footer__logos">
+              <article>
+                  <h2>Datos de contacto</h2>
+                </article>
+            <form id="contactForm" class="contact-form">
+              <div class="form-columns">
+                <div class="form-column">
+                  <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+                  </div>
+                  <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico"required />
+                  </div>
+                  <div>
+                    <label for="category">Categoría:</label>
+                    <select id="category" name="category" required>
+                      <option value="">Seleccione una categoría</option>
+                      <option value="consulta">Consulta</option>
+                      <option value="trabajo">Trabaja con nosotros</option>
+                      <option value="publicar">Quiero publicar un plato</option>
+                      <option value="restaurante">Quiero publicar mi restaurante</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="footer_links_col">
-                    <div class="footer_links_social">
-                        <h4 class="footer_links_title">Social</h4>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img alt="Facebook" src="./img/logoFacebook.png">
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img alt="Instragram" src="./img/logoInstagram.png">
-                        </a>
-                        <a href="https://twitter.com/" target="_blank">
-                            <img alt="Twitter" src="./img/logoTwitter.png">
-                        </a>
-                    </div>
+                <div class="form-column">
+                  <div class="form-colum-right">
+                    <label for="message">Mensaje:</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Dejanos tu mensaje..."
+                      required
+                    ></textarea>
+                  </div>
+  
+                  <div class="form-colum-right">
+                    <label for="upload">Subir archivo:</label>
+                    <input type="file" id="upload" name="upload" />
+                  </div>
+                  <div class="form-colum-right">
+                    <label for="agree">Acepto los términos y condiciones:</label>
+                    <input type="checkbox" id="agree" name="agree" required />
+                  </div>
                 </div>
-            </div>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
         </div>
-    </footer>
+        <div class="footer_main">
+          <div class="footer_main_codoacodo">
+            <a
+              class="logo-text-link"
+              href="https://buenosaires.gob.ar/educacion/codo-codo-40"
+              target="_blank"
+            >
+              <img
+                alt="Agencia de Aprendizaje a lo largo de la vida"
+                src="./img/LogoCODOACODO.png"
+              />
+              <p class="logo-text">
+                Agencia de Aprendizaje <br />
+                a lo largo de la vida
+              </p>
+            </a>
+          </div>
+          <div class="footer_links">
+            <div class="footer_links_col">
+              <h4 class="footer_links_title">Las Regiones</h4>
+              <ul class="footer_links_list">
+                <!-- en cada href poner las rutas de cada region -->
+                <li class="Norte"><a href="./norte.html">NORTE</a></li>
+                <li class="Este"><a href="/pages/este.html">ESTE</a></li>
+                <li class="Oeste"><a href="">OESTE</a></li>
+                <li class="Sur"><a href="./pages/south.html">SUR</a></li>
+              </ul>
+            </div>
+            <div class="footer_links_col">
+              <div class="footer_links_social">
+                <h4 class="footer_links_title">Social</h4>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img alt="Facebook" src="./img/logoFacebook.png" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img alt="Instragram" src="./img/logoInstagram.png" />
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                  <img alt="Twitter" src="./img/logoTwitter.png" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
 </body>
 

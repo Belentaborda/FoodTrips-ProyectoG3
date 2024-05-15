@@ -1,0 +1,357 @@
+.main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Roboto, serif;
+	margin-top: 90px;
+}
+
+.head {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 26em;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.head .title-block {
+	position: absolute;
+	align-self: center;
+	text-align: center;
+	padding: 5em;
+	border-radius: 10px;
+	z-index: 2;
+	min-width: 800px;
+	max-width: 60%;
+	color: rgb(245, 245, 245);
+	font-family: Roboto Slab, serif;
+}
+
+.head .title-block h1 {
+	font-weight: 400;
+	margin-bottom: 1em;
+}
+
+.head .title-block h1 .este {
+	font-weight: 800;
+}
+
+.head .title-block p {
+	font-size: 20px;
+}
+
+.color-block {
+	background-color: hsl(320, 65%, 25%);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.5;
+}
+
+.head img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	animation: scaleImg 60s infinite ease-in-out;
+}
+
+@keyframes scaleImg {
+	0% {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.2);
+	}
+
+	90% {
+		transform: scale(1);
+	}
+}
+
+/* ------------------ grid container ------------------  */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 1em;
+	justify-items: center;
+	width: 80%;
+	font-family: Roboto Slab, serif;
+}
+
+@media only screen and (max-width: 1120px) {
+	.grid-container {
+		grid-template-columns: auto;
+	}
+}
+
+/* ------------------     card     -------------------  */
+
+.card-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 1.5vh 0;
+	margin-bottom: 12vh;
+	width: 400px;
+	height: 270px;
+	overflow: hidden;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease;
+}
+
+.card-item:hover {
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-item .pic {
+	position: relative;
+	height: 80%;
+	border-radius: 10px 10px 0 0;
+	z-index: 1;
+}
+
+.card-item .pic img {
+	width: 100%;
+	transition: all 0.3s ease;
+}
+
+.card-item .pic:hover img {
+	transform: scale(1.1);
+}
+
+.card-item .pic:hover .overlay {
+	opacity: 1;
+}
+
+.besugo {
+	transform: translateY(-120px);
+}
+.card-item .pic:hover .besugo {
+	transform: scale(1.1) translateY(-120px);
+}
+
+/* ------------------ grid card item overlay ------------------  */
+
+.card-item .overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 45%);
+	color: rgb(245, 245, 245);
+	padding: 12px;
+	border-radius: 8px;
+	z-index: 3;
+	cursor: pointer;
+	opacity: 0;
+	transition: all 0.3s ease 0.1s;
+	scale: 1;
+}
+
+.card-item .overlay:hover {
+	padding: 16px;
+	backdrop-filter: blur(1.5px);
+	font-size: 17.5px;
+}
+
+.plato {
+	width: 100%;
+	height: 100%;
+	align-content: center;
+	text-align: center;
+	z-index: 3;
+	font-size: 14px;
+	background-color: rgb(26, 27, 27);
+}
+
+/* ------------------ modal ------------------ */
+.modal {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	z-index: 999;
+}
+
+.modal-background-blurred {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+}
+
+.close {
+	background: #1a1b1b;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	color: #fff;
+	float: right;
+	scale: 2;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: rgb(255, 76, 76);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ----------- modal: contenido ----------- */
+.modal-content {
+	position: relative;
+	background-color: #1a1b1b;
+	color: rgb(245, 245, 245);
+	margin: 0 auto;
+	padding: 0 20px;
+	border: 1px solid #333;
+	border-radius: 10px;
+	width: 800px;
+	height: auto;
+	max-height: 75%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: justify;
+}
+
+.receta-mariscos h1,
+.receta-rabas h1,
+.receta-alfajores h1,
+.receta-besugo h1 {
+	margin-bottom: 8px;
+}
+
+.receta-mariscos li,
+.receta-rabas li,
+.receta-alfajores li,
+.receta-besugo li {
+	margin-bottom: 8px;
+}
+
+.receta-mariscos,
+.receta-rabas,
+.receta-alfajores,
+.receta-besugo {
+	padding: 1em 1.2em;
+}
+
+.receta-mariscos .ingredientes,
+.receta-rabas .ingredientes,
+.receta-alfajores .ingredientes,
+.receta-besugo .ingredientes {
+	margin-bottom: 32px;
+}
+
+.receta-mariscos .preparacion,
+.receta-rabas .preparacion,
+.receta-alfajores .preparacion,
+.receta-besugo .preparacion {
+	padding-left: 0;
+}
+
+.receta-alfajores h3 {
+	margin: 16px 0 8px 0;
+}
+
+.receta-besugo .preparacion-pescado,
+.receta-besugo h3,
+.receta-besugo p {
+	padding-left: 16px;
+}
+
+.receta-besugo h2 {
+	margin: 32px 0 8px 0;
+}
+
+.receta-besugo p {
+	margin: 0 0 16px 0;
+}
+
+/* ----------- modal: scrollbar ----------- */
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background: #353535;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #5e5e5e;
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #6f6f6f;
+}
+::-webkit-scrollbar-thumb:active {
+	background: hsl(0, 0%, 49%);
+}
+
+/* ------------------ modo dia ------------------ */
+.block-light-dark {
+	display: flex;
+	position: sticky;
+	top: 90px;
+	width: 100%;
+	background-color: #1a1b1b;
+	justify-content: center;
+	color: white;
+	z-index: 99;
+}
+.light-dark-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 200px;
+	justify-content: space-evenly;
+	user-select: none;
+}
+
+.light-dark-container span:nth-child(2) {
+	cursor: default;
+}
+
+/* texto del iconito */
+.light-dark-container .light-dark-text {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 auto;
+	cursor: pointer;
+	width: 100px;
+	text-align: center;
+}
+
+/* iconito */
+.toggle-mode {
+	margin: 8px;
+	font-size: 12px;
+	cursor: pointer;
+	width: 100px;
+	text-align: center;
+}
+
+.dark-mode {
+	background-color: rgb(26, 27, 27);
+	color: rgb(245, 245, 245);
+}
+.light-mode {
+	background-color: rgb(245, 245, 245);
+	color: rgb(26, 27, 27);
+}
