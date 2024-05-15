@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -194,7 +195,7 @@ li a {
     .logoBox h1 {
         display: none;
     }
-}
+
 /*--------------------Footer------------------*/
 .footer__logos {
     background-color:#d4cfb9;
