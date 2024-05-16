@@ -65,7 +65,6 @@ ul .navList {
 .navbarListBoxes .Oeste:hover {
 
     color: #21be36;
-
 }
 
 .navbarListBoxes .Norte a {
@@ -82,7 +81,6 @@ ul .navList {
 
 .navbarListBoxes .Oeste a {
     color: #21be36;
-
 }
 
 .navbarListBoxes .navList a:hover {
@@ -127,9 +125,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover::after {
-
     background-color: #21be36;
-
 }
 
 li a {
@@ -163,7 +159,6 @@ li a {
     color: #3E4042;
 }
 
-
 @media screen and (max-width: 768px) {
 
     .lenguage {
@@ -187,21 +182,6 @@ li a {
         display: none;
     }
 }
-
-    .navbarListBoxes {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 16px;
-    }
-
-    .navList {
-        margin: 10px;
-    }
-
-    .logoBox h1 {
-        display: none;
-    }
-
 
 /*--------------------Footer------------------*/
 .footer__logos {
@@ -266,7 +246,7 @@ li a {
   .contact-form button {
     width: 150%;
     padding: 10px;
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: 14px;
     box-sizing: border-box;
     border-radius: 5px; 
     border:none;
@@ -484,7 +464,7 @@ ul {
 }
 
 .Oeste a {
-    color:#21be36;
+    color: #21be36;
 }
 
 .Oeste a:visited {
