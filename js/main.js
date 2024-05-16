@@ -1,4 +1,4 @@
-const openModal = document.querySelector('.ver-fotos');
+const openModal = document.querySelector('#slide1');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal-close');
 
