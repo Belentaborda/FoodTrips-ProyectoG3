@@ -1,63 +1,39 @@
-
-/* Estilos para el botón "Ver fotos" */
-.region_top_pics {
-    background: rgba(0, 0, 0, 0.3);
-    border: 0;
-    color: white;
-    padding: 5px 12px 6px 12px;
-    outline: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 0.7em;
-    border-radius: 20px;
-    -webkit-transition: 500ms;
-    transition: 500ms;/* Transición suave al cambiar la transformación */
-
-}
-
-/* Estilos para el botón "Ve fotos" al pasar el cursor */
-.region_top_pics:hover {
-    transform: scale(1.1); /* Escalar el botón al pasar el cursor */
-}
-/* Estilos para el fondo de la sección "Región Norte" */
-.region_top{
-    background-color: rgba(169, 76, 30, 0.7);
+*{
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .region_top {
-    background-image: url(../img/Norte/Norte1.png); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajustar imagen para cubrir completamente */
-    font-family: "Roboto", Helvetica, "Segoe UI", sans-serif;
+    background-image: url(../img/Norte/Norte1.png); 
+    background-size: cover; 
+    font-family: "Roboto", sans-serif;
     z-index: 1;
-    text-align: center; /* Alinear texto al centro */
+    text-align: center;
     position: relative; 
-    padding: 100px 30px 160px 30px;
+    padding: 180px 30px 160px 30px;
     color: white;
 }
+
 .region_top::before {
-    content: ""; /* Crear un pseudo-elemento antes del contenido */
-    position: absolute; /* Posicionar de manera absoluta dentro del contenedor */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(169, 76, 30, 0.6); /* Fondo con color transparente (ajustar la opacidad aquí) */
-    z-index: -1; /* Colocar detrás del contenido principal */
+    background-color: rgba(169, 76, 30, 0.6);
+    z-index: -1; 
 }
 
-
 .region_top_title{
-    color: white;
-    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
-    font-size: 3.250em;
-    font-weight: 14;
-    letter-spacing: -0.03em;
-    margin: 15px 0 10px 0;
-    text-align: center
+    font-size: 70px;
+    font-weight: 200;
+    color: rgb(248, 238, 226);
 }
 
 .region_top_title strong {
-    font-weight: 700
+    font-weight: 800;
+    color: rgb(248, 238, 226);
 }
 
 .region_top_text {
@@ -66,10 +42,16 @@
 }
 
 .region_top_text p {
-    color: white;
-    font-weight: 300;
-    font-size: 1.125em;
-    line-height: 1.5em
+    font-family: "Roboto", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 
@@ -77,8 +59,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    justify-items: center; /* Centrar los elementos dentro de la cuadrícula */
-    align-items: center; /* Centrar verticalmente los elementos dentro de la cuadrícula */
+    justify-items: center; 
+    align-items: center;
     padding-top: 40px;
     background: rgb(230, 230, 230);    
 
@@ -106,9 +88,9 @@
 }
 
 .region_item img {
-    width: 100%; /* Utilizar el ancho completo del contenedor */
-    max-width: 400px; /* Establecer un ancho máximo para las imágenes */
-    height: auto; /* Altura automática para mantener la proporción */
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
     object-fit: cover;
     border-radius: 0px;
     transition: transform 0.1s ease;
@@ -130,7 +112,7 @@
 
 .region_item strong {
     font-weight: bold;
-    text-align: center; /* Centrar el texto <strong> */
+    text-align: center; 
 }
 
 #cabrito, #humita {
@@ -153,9 +135,9 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    width: 300%; /* Ancho del modal */
-    max-width: auto; /* Ancho máximo del modal */
-    height: 0vh; /* Altura del modal */
+    width: 300%; 
+    max-width: auto; 
+    height: 0vh;
     float: inline-end;
 }
 
@@ -194,7 +176,7 @@ bottom: 580px;
     top: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0));
-    border: none;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .modal-content h2{
@@ -205,7 +187,7 @@ bottom: 580px;
     position: absolute;
 }
 
-/* Mostrar el modal cuando el div es el target */
+
 .modal:target {
     display: block;
 }
@@ -221,11 +203,12 @@ bottom: 580px;
     font-weight: bold;
     padding: 0px 0px 0px 30px;
     margin-bottom: 0px;
+
 }
 
 .modal_receta {
-    width: 60%; /* Ancho del 60% para la preparación */
-    float: left; /* Alinear a la izquierda */
+    width: 60%; 
+    float: left; 
     list-style: none;
     text-align: left;
     font-size:0.9em;
@@ -236,18 +219,16 @@ bottom: 580px;
  margin-bottom: 15px;
 }
 
-    
-/* Estilos para la sección de ingredientes */
 .modal_ingredientes {
-    width: 30%; /* Ancho del 40% para los ingredientes */
-    float: right; /* Alinear a la derecha */
-    border: 2px solid #ccc; /* Borde sólido */
-    border-radius: 20px 0 20px 0 ; /* Redondear las esquinas superiores */
+    width: 30%;
+    float: right; 
+    border: 2px solid #ccc; 
+    border-radius: 20px 0 20px 0 ;
     padding: 10px;
     background-color: #fff;
     box-shadow:
-    -4px 0 4px rgba(0, 0, 0, 0.1), /* Sombra en el lado izquierdo */
-    0 4px 4px rgba(0, 0, 0, 0.1); /* Sombra en el borde inferior */   
+    -4px 0 4px rgba(0, 0, 0, 0.1), 
+    0 4px 4px rgba(0, 0, 0, 0.1);   
     background-color: rgba(39, 39, 39, 0.5);
     text-align: left;
     list-style: none;
@@ -258,7 +239,7 @@ bottom: 580px;
     
 }
 
-/* Estilos para el contenedor del lugar */
+
 .modal_lugar {
   position: absolute;
   bottom: 0px;
@@ -266,38 +247,42 @@ bottom: 580px;
   transform: translateX(-50%);
   background-color: #f0f0f0;
   padding: 10px;
-  width: 97.7%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   color: black;
+  border-radius: 0px 0px 15px 15px;
 
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #48979e;
+    
+
 }
 a:hover {
-    text-decoration: none; /* Mantener el subrayado desactivado al pasar el cursor */
-    color: #0056b3; /
+    text-decoration: none; 
+    color: #0056b3;
+    
 
 }
 
 .estrellas img {
-    width: 60px; /* Ancho deseado de la imagen de la estrella (ajústalo según sea necesario) */
-    height: auto; /* Altura automática para mantener la proporción de la imagen */
-    vertical-align: bottom; /* Alinear verticalmente con el texto */
+    width: 60px;
+    height: auto; 
+    vertical-align: bottom; 
   }
   
   .estrellas .puntaje {
-    display: inline-block; /* Mostrar como bloque en línea para ocupar solo el espacio necesario */
-    margin-left: 10px; /* Espacio a la izquierda del puntaje */
-    font-weight: bold; /* Hacer el texto en negrita */
+    display: inline-block; 
+    margin-left: 10px; 
+    font-weight: bold; 
     font-size: 3em;
-    color: rgb(247, 182, 18); /* Cambiar el color del texto del puntaje a rgba(226,198,125,1) */
+    color:  rgb(166, 148, 32, 0.5);; 
   }
-/* Estilos para el botón de cerrar */
+
 .cerrar {
     color: white;
     text-decoration: none;
