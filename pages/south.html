@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/south.css">
     <link rel="shortcut icon" href="../img/foodtrips-logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>FoodTrips</title>
 </head>
 
@@ -15,17 +25,22 @@
     <header>
         <nav class="navbar">
             <div>
-                <a href="../index.html">
+                <a href="../index.html" class="logoBox">
                     <img src="../img/foodtrips-logo.png" alt="logo" class="logo">
+                    <h1>FoodTrips</h1>
                 </a>
             </div>
             <div>
-                <ul>
+                <ul class="navbarListBoxes">
                     <li class="navList Norte"><a href="">NORTE</a></li>
                     <li class="navList Este"><a href="">ESTE</a></li>
                     <li class="navList Oeste"><a href="">OESTE</a></li>
                     <li class="navList Sur"><a href="./south.html">SUR</a></li>
                 </ul>
+            </div>
+            <div class="lenguage">
+                <img src="../img/globe.png" alt="lenguaje" width="40px">
+                <span>ES</span>
             </div>
         </nav>
     </header>
@@ -51,7 +66,7 @@
             </div>
         </section>
         <section class="boxContainer">
-            <article class="prueba">
+            <article class="articleMargin">
                 <div class="foodBox" onclick="openModal('modal1')">
                     <img src="../img/south/Costillar-de-cordero-a-la-salvia.jpg" alt="">
                     <div class="textBox">
@@ -61,7 +76,7 @@
                     </div>
                 </div>
             </article>
-            <article class="prueba">
+            <article class="articleMargin">
                 <div class="foodBox" onclick="openModal('modal2')">
                     <img src="../img/south/Timbal-centolla-promar-recetas.jpg" alt="">
                     <div class="textBox">
@@ -70,7 +85,7 @@
                     </div>
                 </div>
             </article>
-            <article class="prueba">
+            <article class="articleMargin">
                 <div class="foodBox" onclick="openModal('modal3')">
                     <img src="../img/south/Creme-brulee-con-Calafate.jpeg" alt="">
                     <div class="textBox">
@@ -79,7 +94,7 @@
                     </div>
                 </div>
             </article>
-            <article class="prueba">
+            <article class="articleMargin">
                 <div class="foodBox" onclick="openModal('modal4')">
                     <img src="../img/south/Llama-al-vino-tinto.jpg" alt="">
                     <div class="textBox">
@@ -94,93 +109,338 @@
     <!-- Modal -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Título del modal 1</h2>
-            <p>Contenido del modal...</p>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Título del modal 2</h2>
-            <p>Contenido del modal...</p>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Título del modal 3</h2>
-            <p>Contenido del modal...</p>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal4')">&times;</span>
-            <h2>Título del modal 4</h2>
-            <p>Contenido del modal...</p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer_main">
-            <div class="footer_main_codoacodo">
-                <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40">
-                    <img alt="Agencia de Aprendizaje a lo largo de la vida" src="../img/LogoCODOACODO.png">
-                    <p class="logo-text">Agencia de Aprendizaje <br> a lo largo de la vida</p>
-                </a>
-            </div>
-            <div class="footer_links">
-                <div class="footer_links_col">
-                    <h4 class="footer_links_title">Las Regiones</h4>
-                    <ul class="footer_links_list">
-                        <!-- en cada href poner las rutas de cada region -->
-                        <li class="Norte"><a href="">NORTE</a></li>
-                        <li class="Este"><a href="">ESTE</a></li>
-                        <li class="Oeste"><a href="">OESTE</a></li>
-                        <li class="Sur"><a href="./south.html">SUR</a></li>
+            <div class="modal-info">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Costillar de cordero</h2>
+                <h3>a la salvia, en reducción de vino tinto con base de cebolla y ajo</h3>
+                <div class="ingredientsBox">
+                    <h5>Ingredientes:</h5>
+                    <ul>
+                        <li>1 Costillar de cordero</li>
+                        <li>2 Cebollas grandes</li>
+                        <li>2 Vasos de vino tinto</li>
+                        <li>1 Taza de pan rallado</li>
+                        <li>2 Dientes de ajo</li>
+                        <li>30g Almendras</li>
+                        <li>3 Huevos</li>
+                        <li>50g Queso rallado</li>
+                        <li>c/n Salvia, perejil</li>
                     </ul>
                 </div>
-                <div class="footer_links_col">
-                    <div class="footer_links_social">
-                        <h4 class="footer_links_title">Social</h4>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img alt="Facebook" src="../img/logoFacebook.png">
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img alt="Instragram" src="../img/logoInstagram.png">
-                        </a>
-                        <a href="https://twitter.com/" target="_blank">
-                            <img alt="Twitter" src="../img/logoTwitter.png">
-                        </a>
+                <div class="preparationBox">
+                    <h5>Preparación</h5>
+                    <p> Desgrasar parcialmente el costillar y separar la carne de los huesos conservando la estructura.
+                        Salpimentar, colocar en una asadera, agregar las cebollas cortadas en cubos, el vino y el agua.
+                        Cocinar durante 20 minutos en horno caliente.</p>
+                    <p> Entretanto, picar el perejil y la salvia. Licuar ambas hierbas con el pan rallado, las
+                        almendras,
+                        los huevos, el queso y los dientes de ajo.</p>
+                    <p> Retirar el costillar del horno. Cubrirlo con la preparación anterior y terminar la cocción en
+                        horno
+                        fuerte.</p>
+                    <p>Reservar la carne en lugar caliente. Agregar agua a la asadera y unas hojas de salvia. Reducir el
+                        fondo de cocción raspando bien las adherencias. Agregar ese jugo a la carne.</p>
+                </div>
+            </div>
+            <div class="infoContainer">
+                <div>
+                    <h4 class="marginTitle">Plato catado en:</h4>
+                    <h2><a href="https://www.tripadvisor.com.ar/Restaurant_Review-g312830-d13917265-Reviews-PilPil-Esquel_Province_of_Chubut_Patagonia.html"
+                            target="_blank">PilPil</a></h2>
+                </div>
+                <div class="scoreNumber">
+                    <h2>4,6</h2>
+                    <div><img src="../img/star1.png" alt="estrella" width="50px"></div>
+                </div>
+                <div>
+                    <h4>Provincia de Chubut</h4>
+                    <h4>Ciudad de Esquel</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <div class="modal-info">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2>Timbal de centolla
+                    </h2>
+                    <h3>con vegetales al limón y pimienta negra</h3>
+                    <div class="ingredientsBox">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>500g Centolla</li>
+                            <li>100g Queso crema</li>
+                            <li>230g Yogurt natural</li>
+                            <li>1kg Limón sutil</li>
+                            <li>c/n Sal, pimienta</li>
+                            <li>c/n Merkén</li>
+                            <li>c/n Aceite de oliva</li>
+                            <li>c/n Vinagre de manzana</li>
+                            <li>2 Paltas</li>
+                            <li>1 Puerro</li>
+                            <li>2 Zanahorias</li>
+                        </ul>
+                    </div>
+                    <div class="preparationBox">
+                        <h5>Preparación</h5>
+                        <p> Para comenzar debes exprimir los limones y separar el zumo para 3 cosas; primero para el
+                            aderezo del timbal, para el dressing del plato completo y para escabechar el puerro.
+                        </p>
+                        <p>Escabeche de Puerro:
+                            Mezclar el zumo del limón en parte iguales junto al vinagre de manzana, añadir pimienta, sal
+                            y el puerro previamente picado, dejar reposar unas 3 horas antes.
+                        </p>
+                        <p>Crocantes de zanahoria:
+                            Luego de lavar y pelar las zanahorias con un pelador cortar a lo largo trozos delgados y de
+                            estructura completa para luego meterlo al horno en una bandeja hasta que se doren y queden
+                            crocantes.
+                        </p>
+                        <p>Dressing:
+                            Mezclar el limón, el aceite de oliva, el merkén, sal y pimienta para luego vestir nuestros
+                            plato.
+                        </p>
+                        <p>Timbal:
+                            En un bowl incorporar el yogurt, el quedo crema y el limón hasta conseguir una mezcla
+                            homogénea; a continuación añadir la Centolla.
+                        </p>
+                        <p>En un plato montamos la centolla dentro de un pocillo para luego retirar y que mantenga esa
+                            forma, recuerda escurrir el líquido de ésta antes de montar, de lo contrario es probable que
+                            se desarme nuestros timbal.
+                        </p>
+                        <p>Luego de retirar el pocillo, decorar con la palta fileteada alrededor, a un castado montar el
+                            puerro escabechado y los crocantes de zanahoria, añadir el dressing a gusto y ¡disfrutar!
+                        </p>
+                    </div>
+                </div>
+                <div class="infoContainer">
+                    <div>
+                        <h4>Plato catado en:</h4>
+                        <h2><a href="https://www.tripadvisor.com.ar/Restaurant_Review-g312855-d8603867-Reviews-Restaurant_Le_Martial-Ushuaia_Province_of_Tierra_del_Fuego_Patagonia.html"
+                                target="_blank">Le Martial</a></h2>
+                    </div>
+                    <div class="scoreNumber">
+                        <h2>4,5</h2>
+                        <div><img src="../img/star1.png" alt="estrella" width="50px"></div>
+                    </div>
+                    <div>
+                        <h4>Provincia de Tierra del Fuego</h4>
+                        <h4>Ciudad de Ushuaia</h4>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+        <!-- Modal -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <div class="modal-info">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2>Creme brulée
+                    </h2>
+                    <h3>con frutos de Calafate, salsa de frutos rojos y hojas de menta</h3>
+                    <div class="ingredientsBox">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>500g Leche</li>
+                            <li>500g Crema</li>
+                            <li>300g Azúcar</li>
+                            <li>1 Taza de pan rallado</li>
+                            <li>c/n Cáscara de naranja</li>
+                            <li>c/n Mermelada de calafate/Helado de calafate</li>
+                            <li>c/n Frutos de calafate</li>
+                        </ul>
+                    </div>
+                    <div class="preparationBox">
+                        <h5>Preparación</h5>
+                        <p> Calentar la crema con la mitad de la leche y el azúcar hasta disolverla.</p>
+                        <p> Agregar la rayadura de naranja para perfumar.</p>
+                        <p> Mezclar las yemas con el resto de la leche.</p>
+                        <p> Unir ambas preparaciones y hornear a baño María en cuencos individuales por 20/30 minutos a
+                            150 grados o hasta que coagule la crema.</p>
+                        <p> Servir con mermelada o salsa de calafate o una bocha de helado de calafate o frutos rojos.
+                        </p>
+                    </div>
+                </div>
+                <div class="infoContainer">
+                    <div>
+                        <h4>Plato catado en:</h4>
+                        <h2><a href="https://www.tripadvisor.com.ar/Restaurant_Review-g312851-d7130149-Reviews-MAKO_fuegos_y_vinos-El_Calafate_Province_of_Santa_Cruz_Patagonia.html"
+                                target="_blank">Mako, Fuegos y Vinos</a></h2>
+                    </div>
+                    <div class="scoreNumber">
+                        <h2>4,7</h2>
+                        <div><img src="../img/star1.png" alt="estrella" width="50px"></div>
+                    </div>
+                    <div>
+                        <h4>Provincia de Santa Cruz</h4>
+                        <h4>Ciudad de El Calafate</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <div class="modal-info">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <h2>Llama al vino tinto</h2>
+                    <h3>acompañada con quinoa, vegetales salteados y carotes asados</h3>
+                    <div class="ingredientsBox">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>1kg Lomo de llama</li>
+                            <li>1 Lata pequeña de concentrado</li>
+                            <li>1kg Quinua real blanca</li>
+                            <li>2 Cebollas</li>
+                            <li>250g Zanahorias y papa imilla</li>
+                            <li>2 Carotes medianos</li>
+                            <li>2 Berenjenas medianas</li>
+                            <li>200g Nabos</li>
+                            <li>c/n Perejil</li>
+                            <li>1 Pimiento verde y rojo</li>
+                            <li>1 Taza de vino fino tinto </li>
+                        </ul>
+                    </div>
+                    <div class="preparationBox">
+                        <h5>Preparación</h5>
+                        <p> Cortar la carne en trozos, meterla a la olla junto con la cebolla cortada en juliana. Echar
+                            el
+                            aceite de oliva y dejar dorar unos minutos. Posteriormente, mezclar con el perejil y sazonar
+                            con
+                            todas las especias. Poner a fuego lento con el vino durante 10 minutos.</p>
+                        <p> Añadir a la olla agua y echar las verduras; las zanahorias cortadas en rodajas, las papas y
+                            los
+                            nabos pelados y cortados en cubos, los pimientos cortados en tiras, las berenjenas y los
+                            carotes
+                            cortados en rodajas. Finalmente, echar el concentrado de tomate.</p>
+                        <p> Cocinar a fuego lento, durante dos horas. Paralelamente, en otra olla con agua y sin sal,
+                            hacer
+                            cocer la quinua real; ésta debe terminar su cocción suelta.</p>
+                        <p>Una vez terminada la preparación, servir la quinua real con una buena porción de carne jugosa
+                            y
+                            acompañada de las verduras.</p>
+                    </div>
+                </div>
+                <div class="infoContainer">
+                    <div>
+                        <h4>Plato catado en:</h4>
+                        <h2><a href="https://www.tripadvisor.com.ar/Restaurant_Review-g316035-d2195729-Reviews-Restaurante_Ahonikenk_Chalten_Fonda_Patagonia-El_Chalten_Province_of_Santa_Cruz_P.html"
+                                target="_blank">Ahonikenk</a></h2>
+                    </div>
+                    <div class="scoreNumber">
+                        <h2>4,9</h2>
+                        <div><img src="../img/star1.png" alt="estrella" width="50px"></div>
+                    </div>
+                    <div>
+                        <h4>Provincia de Santa Cruz</h4>
+                        <h4>El Chaltén</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script>
-        function openModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = "block";
-        }
-
-        function closeModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = "none";
-        }
-        // Cierra el modal cuando se hace clic fuera de él
-        window.onclick = function (event) {
-            var modals = document.querySelectorAll(".modal");
-            modals.forEach(function (modal) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            });
-        }
-    </script>
+        <footer id="footer">
+            <div class="footer_logos">
+              <div class="footer__logos">
+                  <article>
+                      <h2>Datos de contacto</h2>
+                    </article>
+                <form id="contactForm" class="contact-form">
+                  <div class="form-columns">
+                    <div class="form-column">
+                      <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+                      </div>
+                      <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico"required />
+                      </div>
+                      <div>
+                        <label for="category">Categoría:</label>
+                        <select id="category" name="category" required>
+                          <option value="">Seleccione una categoría</option>
+                          <option value="consulta">Consulta</option>
+                          <option value="trabajo">Trabaja con nosotros</option>
+                          <option value="publicar">Quiero publicar un plato</option>
+                          <option value="restaurante">Quiero publicar mi restaurante</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-column">
+                      <div class="form-colum-right">
+                        <label for="message">Mensaje:</label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows="4"
+                          placeholder="Dejanos tu mensaje..."
+                          required
+                        ></textarea>
+                      </div>
+      
+                      <div class="form-colum-right">
+                        <label for="upload">Subir archivo:</label>
+                        <input type="file" id="upload" name="upload" />
+                      </div>
+                      <div class="form-colum-right">
+                        <label for="agree">Acepto los términos y condiciones:</label>
+                        <input type="checkbox" id="agree" name="agree" required />
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit">Enviar</button>
+                </form>
+              </div>
+            </div>
+            <div class="footer_main">
+              <div class="footer_main_codoacodo">
+                <a
+                  class="logo-text-link"
+                  href="https://buenosaires.gob.ar/educacion/codo-codo-40"
+                  target="_blank"
+                >
+                  <img
+                    alt="Agencia de Aprendizaje a lo largo de la vida"
+                    src="../img/LogoCODOACODO.png"
+                  />
+                  <p class="logo-text">
+                    Agencia de Aprendizaje <br />
+                    a lo largo de la vida
+                  </p>
+                </a>
+              </div>
+              <div class="footer_links">
+                <div class="footer_links_col">
+                  <h4 class="footer_links_title">Las Regiones</h4>
+                  <ul class="footer_links_list">
+                    <li class="Norte"><a href="./norte.html">NORTE</a></li>
+                    <li class="Este"><a href="./este.html">ESTE</a></li>
+                    <li class="Oeste"><a href="./west.html">OESTE</a></li>
+                    <li class="Sur"><a href="./south.html">SUR</a></li>
+                  </ul>
+                </div>
+                <div class="footer_links_col">
+                  <div class="footer_links_social">
+                    <h4 class="footer_links_title">Social</h4>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <img alt="Facebook" src="../img/logoFacebook.png" />
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <img alt="Instragram" src="../img/logoInstagram.png" />
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                      <img alt="Twitter" src="../img/logoTwitter.png" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <script src="../Js/index.js"></script>
+        <script src="../Js/south.js"></script>
 </body>
 
 </html>

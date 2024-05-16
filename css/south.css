@@ -1,5 +1,7 @@
 body {
     background-color: rgb(244, 244, 244);
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
 }
 
 .imgContainer {
@@ -30,6 +32,7 @@ body {
 }
 
 .headerText {
+    font-family: "Roboto", sans-serif;
     color: rgba(255, 255, 255, 1);
     display: block;
     width: 100%;
@@ -46,10 +49,10 @@ body {
     color: rgb(248, 238, 226);
 }
 
-.recipesBtnContainer{
-padding: 25px 30px;
-background-color: rgb(255, 255, 255);
-text-align: center;
+.recipesBtnContainer {
+    padding: 25px 30px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 .recipesBtn {
@@ -79,7 +82,7 @@ article img {
     justify-content: space-around;
 }
 
-.prueba {
+.articleMargin {
     margin: 40px;
 }
 
@@ -94,7 +97,6 @@ article img {
 .foodBox:hover {
     box-shadow: 10px 45px 40px 0px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
-    /* Levantar un poco de la pantalla */
     transition: all 0.5s ease;
 }
 
@@ -104,38 +106,52 @@ article img {
 
 .textTitle {
     font-size: 30px;
+    color: #3E4042;
 }
 
 .textDescription {
     font-size: 25px;
 }
 
-/* Estilos del modal */
+/* -------------------- Estilos del modal ------------------------ */
 .modal {
-    display: none; /* Por defecto, el modal está oculto */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* Centra verticalmente el modal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 600px; /* Ancho máximo del modal */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.682317995557598) 59%, rgba(103, 103, 103, 0.7523460067620799) 100%);
+    margin: 10% auto;
+    padding-top: 20px;
+    border-radius: 0px 0px 15px 15px;
+    width: 80%;
+    max-width: 950px;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+.modal.open .modal-content {
+    opacity: 1;
+}
+
+.modal-info {
+    padding: 0px 20px 0px 20px;
 }
 
 .close {
-    color: #aaa;
+    color: #e0e0e0;
     float: right;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: bold;
+    padding-right: 30px;
 }
 
 .close:hover,
@@ -143,4 +159,263 @@ article img {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-content h2 {
+    font-size: 50px;
+    color: #ececec;
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    color: #ececec;
+}
+
+.modal-content h5 {
+    font-size: 15px;
+    color: #ececec;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.modal-content p,
+li {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #ececec;
+}
+
+.modal-content p {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 10px 0px 10px;
+}
+
+.modal-content .ingredientsBox {
+    float: right;
+    background-color: #3E4042;
+    width: 28%;
+    max-height: 450px;
+    padding: 30px 0px 30px 10px;
+    border-radius: 10px 0px 10px 0px;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.ingredientsBox li {
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+.modal-content .ingredientsBox ul {
+    list-style: none;
+}
+
+.modal-content .preparationBox {
+    width: 100%;
+    padding: 40px 10px 30px 10px;
+}
+
+.preparationBox p {
+    padding: 0px 20px 10px 25px;
+}
+
+.infoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ececec;
+    border-radius: 0px 0px 15px 15px;
+    padding-bottom: 25px;
+    margin-top: 40px;
+}
+
+.scoreNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreNumber h2 {
+    color: rgb(166, 148, 32, 0.5);
+}
+
+.modal h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    padding: 25px 35px 0px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3E4042;
+}
+
+.modal h2 a {
+    padding-left: 110px;
+    font-size: 35px;
+}
+
+#modal3 h2 a {
+    padding-left: 10px;
+}
+
+#modal1 h2 a {
+    padding-left: 90px;
+}
+
+.modal a {
+    text-decoration: none;
+    color: #48979e;
+}
+
+.modal a:visited {
+    color: #48979e;
+}
+
+.modal a:hover {
+    color: #38777d;
+}
+
+.marginTitle {
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .boxContainer {
+        padding: 30px 10px;
+    }
+
+    article {
+        max-width: 400px;
+    }
+
+    article img {
+        width: 400px;
+        height: 230px;
+    }
+
+    .articleMargin {
+        margin: 20px;
+    }
+
+    /* -------------------- Estilos del modal ------------------------ */
+
+    .textBox {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .modal-content {
+        margin: 15% auto;
+    }
+
+    .ingredientsBox li {
+        padding-left: 15px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+
+    #modal2 .ingredientsBox {
+        max-height: 500px;
+    }
+
+    #modal4 .ingredientsBox {
+        max-height: 450px;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal h4 {
+        font-size: 14px;
+        padding: 25px 15px 0px 10px;
+    }
+
+    .modal h2 a {
+        padding-left: 0px;
+    }
+
+    .scoreNumber h2 {
+        font-size: 40px;
+    }
+
+    #modal3 h2 a {
+        padding-left: 0px;
+    }
+
+    #modal1 h2 a {
+        padding-left: 0px;
+    }
+
+    .marginTitle {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .imgContainer {
+        padding: 90px 30px 120px 30px;
+    }
+
+    .boxContainer {
+        padding: 15px 5px;
+    }
+
+    .headerTitle {
+        font-size: 60px;
+    }
+
+    article {
+        max-width: 330px;
+    }
+
+    article img {
+        width: 330px;
+        height: 200px;
+    }
+
+    /* -------------------- Estilos del modal ------------------------ */
+
+    .modal-content {
+        margin: 30% auto;
+        width: 95%;
+        padding-top: 0px;
+    }
+
+    .modal-info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content .ingredientsBox {
+        width: 90%;
+        text-align: center;
+    }
+
+    .modal-content .preparationBox {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal h2 {
+        display: inline-flex;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .modal h3 {
+        text-align: center;
+    }
+
+    .close {
+        align-self: flex-end;
+        display: inline-flex;
+        padding-right: 5px;
+    }
 }
