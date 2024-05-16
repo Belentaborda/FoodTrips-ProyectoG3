@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/west-style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <link
+      rel="shortcut icon"
+      href="../img/foodtrips-logo.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Región Oeste</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div>
+            <a href="../index.html" class="logoBox">
+                <img src="../img/foodtrips-logo.png" alt="logo" class="logo">
+                <h1>FoodTrips</h1>
+            </a>
+        </div>
+        <div>
+            <ul class="navbarListBoxes">
+                <li class="navList Norte"><a href="./norte.html">NORTE</a></li>
+                <li class="navList Este"><a href="./este.html">ESTE</a></li>
+                <li class="navList Oeste"><a href="./west.html">OESTE</a></li>
+                <li class="navList Sur"><a href="./south.html">SUR</a></li>
+            </ul>
+        </div>
+        <div class="lenguage">
+            <img src="../img/globe.png" alt="lenguaje" width="40px">
+            <span>ES</span>
+        </div>
+    </nav>
+      
+      <section>
+        <div class="fotoWest">
+          <div class="fotoTxt">
+            <h1 class="titulo-img"><strong>Oeste</strong> Argentino</h1>
+            <p class="txt-img">
+              El Oeste argentino, tierra de días cálidos y noches frías, brinda
+              otros frutos de calidad excepcional, como las aceitunas en sus
+              distintas variedades. A su vez en la región esperan ricas frutas
+              secas, frescas o disecadas y vegetales de calidad increíble. Todo
+              crece rodeado de hierbas que perfuman el aire con ese toque de la
+              autóctona jarilla. Siguiendo por sus caminos siempre se recomienda
+              que se prueben sus carnes. Las hay de todo tipo y se destaca el
+              chivito de Malargüe, que hasta tiene su propia fiesta.
+            </p>
+            
+
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      
+      <section>
+        <nav class="navreg">
+        </nav>
+      </section>
+
+      <section class="modal">
+        <div class="modal-container modal1">
+          <a href="#" class="modal-close">x</a>
+          <h2 class="modal-title">Tortitas raspadas</h2>
+          <p class="modal-paragraph">
+            asadas al rescoldo
+          </p>
+        </div>
+      </section>
+
+      <script src="../js/main.js"></script>
+
+      <section class="container-recetas">
+
+        <div class="recetas receta1">
+            <img src="../img/Oeste/tortitasRaspadasCrop.jpg" alt="tortitas raspadas">
+          <h1 class="receta-title">Tortitas raspadas</h1>
+          <p class="receta-txt">asadas al rescoldo</p>
+          <h2 class="receta-provincia">Mendoza</h2>
+        </div>
+
+        <div class="recetas receta2">
+          <img src="../img/Oeste/chanfainaCrop.jpg" alt="chanfaina">
+          <h1 class="receta-title">Chanfaina</h1>
+          <p class="receta-txt">guisada con arroz</p>
+          <h2 class="receta-provincia">San Luis</h2>
+        </div>
+
+        <div class="recetas receta3">
+          <img src="../img/Oeste/empanadasOsobucoCrop.jpg" alt="empanadas de osobuco">
+          <h1 class="receta-title">Empanadas de osobuco</h1>
+          <p class="receta-txt">con salsa yasgua</p>
+          <h2 class="receta-provincia">Mendoza</h2>
+        </div>
+
+        <div class="recetas receta4">
+          <img src="../img/Oeste/puntaEspaldaCrop.jpg" alt="punta de espalda">
+          <h1 class="receta-title">Punta de espalda a las llamas</h1>
+          <h2 class="receta-provincia">San Juan</h2>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div class="footer_logos">
+        <div class="footer__logos">
+            <article>
+                <h2>Datos de contacto</h2>
+              </article>
+          <form id="contactForm" class="contact-form">
+            <div class="form-columns">
+              <div class="form-column">
+                <div>
+                  <label for="name">Nombre:</label>
+                  <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+                </div>
+                <div>
+                  <label for="email">Correo electrónico:</label>
+                  <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico"required />
+                </div>
+                <div>
+                  <label for="category">Categoría:</label>
+                  <select id="category" name="category" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="trabajo">Trabaja con nosotros</option>
+                    <option value="publicar">Quiero publicar un plato</option>
+                    <option value="restaurante">Quiero publicar mi restaurante</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-column">
+                <div class="form-colum-right">
+                  <label for="message">Mensaje:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Dejanos tu mensaje..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-colum-right">
+                  <label for="upload">Subir archivo:</label>
+                  <input type="file" id="upload" name="upload" />
+                </div>
+                <div class="form-colum-right">
+                  <label for="agree">Acepto los términos y condiciones:</label>
+                  <input type="checkbox" id="agree" name="agree" required />
+                </div>
+              </div>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer_main">
+        <div class="footer_main_codoacodo">
+          <a
+            class="logo-text-link"
+            href="https://buenosaires.gob.ar/educacion/codo-codo-40"
+            target="_blank"
+          >
+            <img
+              alt="Agencia de Aprendizaje a lo largo de la vida"
+              src="../img/LogoCODOACODO.png"
+            />
+            <p class="logo-text">
+              Agencia de Aprendizaje <br />
+              a lo largo de la vida
+            </p>
+          </a>
+        </div>
+        <div class="footer_links">
+          <div class="footer_links_col">
+            <h4 class="footer_links_title">Las Regiones</h4>
+            <ul class="footer_links_list">
+              <li class="Norte"><a href="./norte.html">NORTE</a></li>
+              <li class="Este"><a href="./este.html">ESTE</a></li>
+              <li class="Oeste"><a href="./west.html">OESTE</a></li>
+              <li class="Sur"><a href="./south.html">SUR</a></li>
+            </ul>
+          </div>
+          <div class="footer_links_col">
+            <div class="footer_links_social">
+              <h4 class="footer_links_title">Social</h4>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img alt="Facebook" src="../img/logoFacebook.png" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img alt="Instragram" src="../img/logoInstagram.png" />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img alt="Twitter" src="../img/logoTwitter.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
