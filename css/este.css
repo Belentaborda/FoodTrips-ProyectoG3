@@ -11,7 +11,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 26em;
+	height: 500px;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
@@ -21,8 +21,6 @@
 	position: absolute;
 	align-self: center;
 	text-align: center;
-	padding: 5em;
-	border-radius: 10px;
 	z-index: 2;
 	min-width: 800px;
 	max-width: 60%;
@@ -31,8 +29,9 @@
 }
 
 .head .title-block h1 {
-	font-weight: 400;
-	margin-bottom: 1em;
+	font-weight: 200;
+	margin-bottom: 36px;
+	font-size: 80px;
 }
 
 .head .title-block h1 .este {
@@ -44,7 +43,7 @@
 }
 
 .color-block {
-	background-color: hsl(320, 65%, 25%);
+	background-color: #69164e;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -98,10 +97,10 @@
 	flex-direction: column;
 	margin: 1.5vh 0;
 	margin-bottom: 12vh;
-	width: 400px;
-	height: 270px;
+	width: 450px;
+	height: 400px;
 	overflow: hidden;
-	border-radius: 10px 10px 0 0;
+	border-radius: 4px;
 	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.6);
 	transition: all 0.3s ease;
 }
@@ -119,6 +118,8 @@
 
 .card-item .pic img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	transition: all 0.3s ease;
 }
 
@@ -130,11 +131,18 @@
 	opacity: 1;
 }
 
-.besugo {
-	transform: translateY(-120px);
+.plato {
+	width: 100%;
+	height: 20%;
+	align-content: center;
+	text-align: center;
+	z-index: 3;
+	font-size: 14px;
+	background-color: rgb(26, 27, 27);
 }
+
 .card-item .pic:hover .besugo {
-	transform: scale(1.1) translateY(-120px);
+	transform: scale(1.1);
 }
 
 /* ------------------ grid card item overlay ------------------  */
@@ -160,16 +168,6 @@
 	padding: 16px;
 	backdrop-filter: blur(1.5px);
 	font-size: 17.5px;
-}
-
-.plato {
-	width: 100%;
-	height: 100%;
-	align-content: center;
-	text-align: center;
-	z-index: 3;
-	font-size: 14px;
-	background-color: rgb(26, 27, 27);
 }
 
 /* ------------------ modal ------------------ */
@@ -198,7 +196,6 @@
 }
 
 .close {
-	background: #1a1b1b;
 	position: absolute;
 	right: 15px;
 	top: 10px;
@@ -218,63 +215,205 @@
 /* ----------- modal: contenido ----------- */
 .modal-content {
 	position: relative;
-	background-color: #1a1b1b;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(rgba(111, 111, 111, 0.667), rgb(0, 0, 0));
 	color: rgb(245, 245, 245);
 	margin: 0 auto;
-	padding: 0 20px;
-	border: 1px solid #333;
+	padding: auto 20px;
 	border-radius: 10px;
 	width: 800px;
-	height: auto;
-	max-height: 75%;
+	height: 600px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: justify;
+	font-family: "Roboto Slab", sans-serif;
 }
 
-.receta-mariscos h1,
-.receta-rabas h1,
-.receta-alfajores h1,
+.modal-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.modal-titulo {
+	font-weight: 600;
+	font-size: 48px;
+	text-align: center;
+	padding: 8px 0;
+	background-color: #a42379a3;
+}
+
+.receta {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto 0;
+}
+
+.preparacion-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 320px;
+	overflow-y: scroll;
+	padding-right: 16px;
+}
+
+#flechita-preparacion {
+	bottom: 290px;
+	left: 420px;
+}
+#flechita-ingredientes {
+	bottom: 290px;
+	left: 820px;
+}
+
+#flechita-preparacion,
+#flechita-ingredientes {
+	transition: all .3s ease;
+	position: fixed;
+	cursor: default;
+	width: 14px;
+	height: 10px;
+	fill: none;
+	stroke: #bebebe;
+	stroke-width: 2px;
+	scale: 1.25;
+}
+
+#flechita:hover {
+	stroke: #ffffff;
+}
+
+.preparacion-container h1 {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.preparacion li{
+	margin-bottom: 8px;
+}
+
+.ingredientes-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #00000027;
+	border-left: 1px solid #f6f6f6;
+	border-bottom: 1px solid #f6f6f6;
+	width: 250px;
+	height: auto;
+	max-height: 300px;
+	font-size: 12px;
+	border-radius: 12px 0 12px 0;
+	overflow-y: auto;
+}
+
+.ingredientes-container h1 {
+	margin-bottom: 12px;
+}
+
+.receta-empanadas .ingredientes-container {
+	align-items: flex-start;
+	padding: 0 16px;
+}
+.receta-empanadas .ingredientes-container h1 {
+	align-self: center;
+}
+
+.receta-rabas .ingredientes-container h1 {
+	justify-self: center;
+}
+
+.ingredientes-container li {
+	list-style-type: none;
+}
+
+.ingredientes {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 8px;
+}
+
+.separator {
+	border-left: 1px solid #6f6f6f;
+	height: 200px;
+}
+
+.modal-footer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 0 16px;
+	justify-content: space-between;
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 900;
+	color: rgb(33, 33, 33);
+	background-color: #f6f6f6;
+}
+
+.modal-footer .separator {
+	height: 70px;
+	border-left: 1px solid #292929;
+}
+
+.catado,
+.ubicacion {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 16px;
+}
+
+.puntaje {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 16px;
+	font-size: 24px;
+}
+
+.catado a {
+	color: #A4237A;
+	text-decoration: none;
+}
+.catado a:hover {
+	color: hsl(320, 65%, 49%);
+}
+.catado a:active {
+	color: hsl(320, 65%, 39%);
+}
+
+.receta-empanadas h1,
 .receta-besugo h1 {
 	margin-bottom: 8px;
 }
 
 .receta-mariscos li,
 .receta-rabas li,
-.receta-alfajores li,
 .receta-besugo li {
+	margin-bottom: 8px;
+}
+
+.receta-empanadas ul {
 	margin-bottom: 8px;
 }
 
 .receta-mariscos,
 .receta-rabas,
-.receta-alfajores,
+.receta-empanadas,
 .receta-besugo {
 	padding: 1em 1.2em;
 }
 
-.receta-mariscos .ingredientes,
-.receta-rabas .ingredientes,
-.receta-alfajores .ingredientes,
 .receta-besugo .ingredientes {
-	margin-bottom: 32px;
-}
-
-.receta-mariscos .preparacion,
-.receta-rabas .preparacion,
-.receta-alfajores .preparacion,
-.receta-besugo .preparacion {
-	padding-left: 0;
-}
-
-.receta-alfajores h3 {
-	margin: 16px 0 8px 0;
-}
-
-.receta-besugo .preparacion-pescado,
-.receta-besugo h3,
-.receta-besugo p {
-	padding-left: 16px;
+	margin: 16px 0;
 }
 
 .receta-besugo h2 {
@@ -287,7 +426,7 @@
 
 /* ----------- modal: scrollbar ----------- */
 ::-webkit-scrollbar {
-	width: 12px;
+	width: 6px;
 }
 ::-webkit-scrollbar-track {
 	background: #353535;
