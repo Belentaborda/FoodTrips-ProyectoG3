@@ -571,15 +571,15 @@ ul {
     font-weight: 300;
     letter-spacing: .03rem;
     line-height: 125%;
-    font-size: 5.2rem;
+    font-size: 4.6rem;
     opacity: 100%;
     position: absolute;
-    left: 18.3%;
-    bottom: 46%;
+    left: 15.3%;
+    bottom: 40%;
 } 
 
 #logo-home{
-    font-size: 7rem;
+    font-size: 6.3rem;
 
 }
 
@@ -588,9 +588,9 @@ ul {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6),#48483abd, rgba(7, 8, 1, 0.6) );
+    background: linear-gradient(to right, rgba(32, 26, 26, 0.8),hsla(60, 11%, 25%, 0.4), rgba(84, 84, 84, 0.2) );
     background-blend-mode: multiply;
-    opacity: 90%;
+    opacity:75%;
 }
 
 .img-slider{
