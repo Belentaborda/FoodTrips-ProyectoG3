@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.getElementById("modal-rabas").style.display = "flex";
 	}
 
-	document.querySelector(".btn-alfajores").onclick = function() {
-		document.getElementById("modal-alfajores").style.display = "flex";
+	document.querySelector(".btn-empanadas").onclick = function() {
+		document.getElementById("modal-empanadas").style.display = "flex";
 	}
 	
 	document.querySelector(".btn-besugo").onclick = function() {
