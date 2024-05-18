@@ -6,6 +6,7 @@
 body {
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
+    
 }
 
 .logo {
@@ -182,6 +183,7 @@ li a {
     }
 }
 
+
 /*--------------------Footer------------------*/
 
 .footer__logos {
@@ -338,7 +340,6 @@ select {
     border-radius: 4px;
     background-color: #fff;
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,95 30,55 110,55" fill="%23333" /></svg>');
-    /* Flecha personalizada */
     background-repeat: no-repeat;
     background-position: calc(100% - 20px) center;
     background-size: 20px;
@@ -770,3 +771,90 @@ ul {
         opacity: 0;
     }
 }
+
+/*--------------------Section------------------*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color:#897c27ef;
+  }
+  
+  .presentacion, .quienes-somos {
+    width: calc(70% - 10px); 
+    padding: 50px;
+    box-sizing: border-box;
+    margin-left: 10%;
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    color: #d4cfb9;
+  }
+  .presentacion h2{
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2em;
+  }
+.presentacion p{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+  .quienes-somos {
+    border: #2d2e30;;
+    border-radius: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 3%;
+    margin-left: 20%;
+    background-color:#aea04b
+  }
+  
+  .quienes-somos h2{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+  }
+
+.separator{
+    border-bottom: 2px solid #d4cfb9;
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.quienes-somos p{
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    
+}
+
+.agradecimiento{
+    color: #2d2e30;
+    font-weight: bold;    
+}
+
+  .quienes-somos:hover {
+    transform: translate(15px, -15px);
+  }
+  
+  h2, p {
+    text-align: center; 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .quienes-somos {
+      margin-bottom: 10%;
+      margin-left: 10%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 0 10px;
+    }
+  }
