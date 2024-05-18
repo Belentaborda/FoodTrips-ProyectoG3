@@ -10,3 +10,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       event.preventDefault(); // Evitar que se envíe el formulario
     }
   });
+
+  document.getElementById('upload').addEventListener('change', function() {
+    var fileName = this.files[0] ? this.files[0].name : 'No se ha seleccionado ningún archivo';
+    document.getElementById('file-name').textContent = fileName;
+  });

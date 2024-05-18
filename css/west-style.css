@@ -155,7 +155,7 @@ li a {
 
 /*--------------------Body------------------*/
 
-body{
+body {
     position: relative;
     font-family: "Roboto Slab", serif;
     text-align: center;
@@ -167,7 +167,7 @@ body{
     height: 40vw;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background: linear-gradient(to bottom, rgba(48, 59, 0, 0.60), rgba(48, 59, 0, 0.6)), url("../img/Oeste/oeste-mendoza-1920x700.jpg");
     background-size: cover;
     background-position: center;
@@ -185,7 +185,7 @@ body{
     font-size: 1.1rem;
 }
 
-h1.titulo-img{
+h1.titulo-img {
     padding-bottom: 40px;
     font-family: "Roboto Slab", serif;
     font-weight: 300;
@@ -193,22 +193,22 @@ h1.titulo-img{
     opacity: 85%;
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     padding-right: 5px;
 }
 
-.ver-fotos{
+.ver-fotos {
     margin-top: 20px;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
     letter-spacing: .07rem;
     font-size: .7rem;
-    color:#ffffff;
+    color: #ffffff;
     background-color: rgb(22, 22, 22);
     padding: .4em 1em;
     display: inline-flex;
-    align-items: center;  
-    border: none;  
+    align-items: center;
+    border: none;
     border-radius: 20px;
     opacity: 50%;
     outline: 0;
@@ -217,7 +217,7 @@ h1.titulo-img{
     transition: .1s;
 }
 
-.navreg{
+.navreg {
     position: relative;
     background-color: rgb(167, 179, 118);
     width: 100%;
@@ -227,13 +227,13 @@ h1.titulo-img{
     justify-content: space-between;
 }
 
-.ver-mapa{
+.ver-mapa {
     margin: auto;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
     letter-spacing: .1rem;
     font-size: .8rem;
-    color:#c0c4bc;
+    color: #c0c4bc;
     background-color: rgb(102, 106, 82);
     padding: .6em 1em;
     border-radius: 20px;
@@ -243,9 +243,9 @@ h1.titulo-img{
     transition: background-color .3s;
 }
 
-.modal{
+.modal {
     position: fixed;
-    z-index: 10; 
+    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
@@ -259,7 +259,7 @@ h1.titulo-img{
     --transition: transform .8s;
 }
 
-.modal-show{
+.modal-show {
     opacity: 1;
     pointer-events: unset;
     transition: opacity .6s;
@@ -267,7 +267,7 @@ h1.titulo-img{
     --transition: transform .8s .2s;
 }
 
-.modal-container{
+.modal-container {
     margin: auto;
     width: 90%;
     max-width: 50%;
@@ -283,24 +283,24 @@ h1.titulo-img{
     transition: var(--transition);
 }
 
-.modal-img{
+.modal-img {
     max-width: 300px;
 }
 
-.modal-title{
+.modal-title {
     font-size: 1.5rem;
     color: #cfcfcf;
 }
 
-.modal-paragraph{
+.modal-paragraph {
     margin-bottom: 10px;
     color: #cfcfcf;
 }
 
 
-.modal-close{
+.modal-close {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
     padding: 1em 3em;
     display: inline-block;
     justify-content: right;
@@ -308,36 +308,36 @@ h1.titulo-img{
     transition: background-color .3s;
 }
 
-.modal-close:hover{
+.modal-close:hover {
     color: rgb(125, 142, 57);
     background-color: #ffffff;
-}  
+}
 
-.map{
-    position: fixed; 
-    z-index: 10;   
+.map {
+    position: fixed;
+    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0; 
+    left: 0;
     background-color: #919191bd;
     display: flex;
     opacity: 0;
     pointer-events: none;
-    transition: opacity .6s .2s;  
+    transition: opacity .6s .2s;
     --transform: translateY(-100vh);
     --transition: transform .8s;
-} 
+}
 
-.show-map{
+.show-map {
     opacity: 1;
     pointer-events: unset;
     transition: opacity .6s;
     transform: translateY(0);
     --transition: transform .8s .2s;
-}  
+}
 
-.container-map{
+.container-map {
     margin: auto;
     width: 15%;
     max-width: 350px;
@@ -350,35 +350,35 @@ h1.titulo-img{
     gap: 1em;
     place-items: center;
     transform: var(--transform);
-    transition: var(--transition); 
+    transition: var(--transition);
 }
 
-.container-map path{
-    fill:#5a5a5a;
-    stroke:rgb(220, 220, 220);
+.container-map path {
+    fill: #5a5a5a;
+    stroke: rgb(220, 220, 220);
     stroke-width: 2px;
 }
 
-.container-map :hover{
+.container-map :hover {
     fill: rgb(125, 142, 57);
 }
- 
 
-.map-region{
+
+.map-region {
     font-size: 1rem;
 }
 
-.map-nombre{
+.map-nombre {
     font-size: 1.5rem;
 }
 
-.paragraph-map{
+.paragraph-map {
     margin-bottom: 10px;
 }
 
-.close-map{
+.close-map {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
     background-color: rgb(125, 142, 57);
     padding: 1em 3em;
     border: 2px solid;
@@ -386,14 +386,14 @@ h1.titulo-img{
     display: inline-block;
     font-weight: 400;
     transition: background-color .3s;
-} 
+}
 
-.close-map :hover{
+.close-map :hover {
     color: rgb(125, 142, 57);
     background-color: #ffffff;
-}   
+}
 
-.container-recetas{
+.container-recetas {
     width: 100%;
     max-width: 1150px;
     margin: 60px auto;
@@ -402,12 +402,13 @@ h1.titulo-img{
     flex-wrap: wrap;
     justify-content: center;
     color: #40413d;
+    margin-bottom: 80px;
 }
 
-.recetas{
+.recetas {
     width: 35%;
-    background: #ffffff;    
-    display: block;   
+    background: #ffffff;
+    display: block;
     justify-content: center;
     margin: 40px auto;
     text-align: left;
@@ -417,45 +418,45 @@ h1.titulo-img{
     box-shadow: 10px 35px 30px 0px rgba(0, 0, 0, 0.2);
     transition: all 300ms;
     position: relative;
-    line-height: 30px;  
+    line-height: 30px;
 }
 
-.recetas:hover{
+.recetas:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.recetas img{
+.recetas img {
     width: 100%;
 }
 
-.receta{
+.receta {
     text-decoration: none;
     color: #40413d;
 }
 
-.receta img{
+.receta img {
     overflow: hidden;
     z-index: 10;
 }
 
-.receta-title{
+.receta-title {
     font-size: 1.7rem;
     font-weight: 700;
     padding: 20px 0 0 30px;
 }
 
-.receta-txt{
+.receta-txt {
     font-size: 1.3rem;
     font-weight: 300;
     padding: 0px 0 0 30px;
 }
 
-.receta-provincia{
+.receta-provincia {
     font-size: 1.1rem;
     font-weight: 500;
     padding: 15px 0 20px 30px;
-    color:rgb(179, 179, 179)
+    color: rgb(179, 179, 179)
 }
 
 

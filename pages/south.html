@@ -343,103 +343,95 @@
 
         <footer id="footer">
             <div class="footer_logos">
-              <div class="footer__logos">
-                  <article>
-                      <h2>Datos de contacto</h2>
-                    </article>
-                <form id="contactForm" class="contact-form">
-                  <div class="form-columns">
-                    <div class="form-column">
-                      <div>
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
-                      </div>
-                      <div>
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico"required />
-                      </div>
-                      <div>
-                        <label for="category">Categoría:</label>
-                        <select id="category" name="category" required>
-                          <option value="">Seleccione una categoría</option>
-                          <option value="consulta">Consulta</option>
-                          <option value="trabajo">Trabaja con nosotros</option>
-                          <option value="publicar">Quiero publicar un plato</option>
-                          <option value="restaurante">Quiero publicar mi restaurante</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-column">
-                      <div class="form-colum-right">
-                        <label for="message">Mensaje:</label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows="4"
-                          placeholder="Dejanos tu mensaje..."
-                          required
-                        ></textarea>
-                      </div>
-      
-                      <div class="form-colum-right">
-                        <label for="upload">Subir archivo:</label>
-                        <input type="file" id="upload" name="upload" />
-                      </div>
-                      <div class="form-colum-right">
-                        <label for="agree">Acepto los términos y condiciones:</label>
-                        <input type="checkbox" id="agree" name="agree" required />
-                      </div>
-                    </div>
-                  </div>
-                  <button type="submit">Enviar</button>
+                <div class="footer__logos">
+                    <form id="contactForm" class="contact-form">
+                        <div>
+                            <h2>Datos de contacto</h2>
+                        </div>
+                        <div class="form-columns">
+                            <div class="form-column-left">
+                                <div class="inputs">
+                                    <label for="name">Nombre:</label>
+                                    <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+                                </div>
+                                <div class="inputs">
+                                    <label for="email">Correo electrónico:</label>
+                                    <input type="email" id="email" name="email"
+                                        placeholder="Escribe tu correo electrónico" required />
+                                </div>
+                                <div class="inputs">
+                                    <label for="category">Categoría:</label>
+                                    <select id="category" name="category" required>
+                                        <option value="">Seleccione una categoría</option>
+                                        <option value="consulta">Consulta</option>
+                                        <option value="trabajo">Trabaja con nosotros</option>
+                                        <option value="publicar">Quiero publicar un plato</option>
+                                        <option value="restaurante">Quiero publicar mi restaurante</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column-right">
+                                <div class="inputs">
+                                    <label for="message">Mensaje:</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="Dejanos tu mensaje..."
+                                        required></textarea>
+                                </div>
+                                <div class="inputs">
+                                    <label for="upload" class="file-label">Subir archivo</label>
+                                    <input class="file-button" type="file" id="upload" name="upload" />
+                                    <span id="file-name" class="file-name">No se ha seleccionado ningún archivo</span>
+                                </div>
+                                <div class="inputs input-checkbox">
+                                    <label class="input-checkbox-label" for="agree">
+                                        <input type="checkbox" id="agree" name="agree" required />
+                                        <span class="custom-checkbox"></span>
+                                        Acepto los términos y condiciones
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit">Enviar</button>
+                </div>
                 </form>
-              </div>
-            </div>
-            <div class="footer_main">
-              <div class="footer_main_codoacodo">
-                <a
-                  class="logo-text-link"
-                  href="https://buenosaires.gob.ar/educacion/codo-codo-40"
-                  target="_blank"
-                >
-                  <img
-                    alt="Agencia de Aprendizaje a lo largo de la vida"
-                    src="../img/LogoCODOACODO.png"
-                  />
-                  <p class="logo-text">
-                    Agencia de Aprendizaje <br />
-                    a lo largo de la vida
-                  </p>
-                </a>
-              </div>
-              <div class="footer_links">
-                <div class="footer_links_col">
-                  <h4 class="footer_links_title">Las Regiones</h4>
-                  <ul class="footer_links_list">
-                    <li class="Norte"><a href="./norte.html">NORTE</a></li>
-                    <li class="Este"><a href="./este.html">ESTE</a></li>
-                    <li class="Oeste"><a href="./west.html">OESTE</a></li>
-                    <li class="Sur"><a href="./south.html">SUR</a></li>
-                  </ul>
+                <div class="footer_main">
+                    <div class="footer_main_codoacodo">
+                        <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40"
+                            target="_blank">
+                            <img alt="Agencia de Aprendizaje a lo largo de la vida" src="../img/LogoCODOACODO.png" />
+                            <p class="logo-text">
+                                Agencia de Aprendizaje <br />
+                                a lo largo de la vida
+                            </p>
+                        </a>
+                    </div>
+                    <div class="footer_links">
+                        <div class="footer_links_col">
+                            <h4 class="footer_links_title">Las Regiones</h4>
+                            <ul class="footer_links_list">
+                                <li class="Norte"><a href="./norte.html">NORTE</a></li>
+                                <li class="Este"><a href="./este.html">ESTE</a></li>
+                                <li class="Oeste"><a href="./west.html">OESTE</a></li>
+                                <li class="Sur"><a href="./south.html">SUR</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_links_col">
+                            <div class="footer_links_social">
+                                <h4 class="footer_links_title">Social</h4>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img alt="Facebook" src="../img/logoFacebook.png" />
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img alt="Instragram" src="../img/logoInstagram.png" />
+                                </a>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <img alt="Twitter" src="../img/logoTwitter.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer_links_col">
-                  <div class="footer_links_social">
-                    <h4 class="footer_links_title">Social</h4>
-                    <a href="https://www.facebook.com/" target="_blank">
-                      <img alt="Facebook" src="../img/logoFacebook.png" />
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank">
-                      <img alt="Instragram" src="../img/logoInstagram.png" />
-                    </a>
-                    <a href="https://twitter.com/" target="_blank">
-                      <img alt="Twitter" src="../img/logoTwitter.png" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer>
-          <script src="../js/index.js"></script>
+        </footer>
+        <script src="../js/index.js"></script>
         <script src="../js/south.js"></script>
 </body>
 
