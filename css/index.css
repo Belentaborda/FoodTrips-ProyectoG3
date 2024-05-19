@@ -777,7 +777,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color:#897c27ef;
+    background-color:#2d2e30;;
   }
   
   .presentacion, .quienes-somos {
@@ -804,7 +804,7 @@ ul {
     transition: transform 0.3s ease;
     margin-top: 3%;
     margin-left: 20%;
-    background-color:#aea04b
+    background-color:#d2781ef4
   }
   
   .quienes-somos h2{
