@@ -1,68 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="./img/foodtrips-logo.ico" type="image/x-icon">
-    <title>FoodTrips</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="shortcut icon" href="./img/foodtrips-logo.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>FoodTrips</title>
 </head>
 
 <body>
+  <header>
+    <nav class="navbar">
+      <div>
+        <a href="/index.html" class="logoBox">
+          <img src="./img/foodtrips-logo.png" alt="logo" class="logo">
+          <h1>FoodTrips</h1>
+        </a>
+      </div>
+      <div>
+        <ul class="navbarListBoxes">
+          <li class="navList Norte"><a href="./pages/norte.html">NORTE</a></li>
+          <li class="navList Este"><a href="./pages/este.html">ESTE</a></li>
+          <li class="navList Oeste"><a href="./pages/west.html">OESTE</a></li>
+          <li class="navList Sur"><a href="./pages/south.html">SUR</a></li>
+        </ul>
+      </div>
+      <div class="lenguage">
+        <p><img src="./img/globe.png" alt="lenguaje" width="40"></p>
+        <span>ES</span>
+      </div>
+    </nav>
+  </header>
 
-    <header>
-        <nav>
-            <div>
-                <a href="./index.html">
-                    <img src="./img/foodtrips-logo.png" alt="logo" width="100">
-                </a>
+  <main class="main">
+    <div class="photo-slider">
+      <div class="txt-slider">
+        <h1 class="titulo-slider">Bienvenidos a <br> <strong id="logo-home">FoodTrips</strong></h1>
+      </div>
+      <div class="img-slider">
+        <img id="slide1" src="img/Slider/slider1-regNorte.png" alt="Jujuy">
+        <img id="slide2" src="img/Slider/slider2-regEste.png" alt="Mar del Plata">
+        <img id="slide3" src="img/Slider/slider3-regOeste.png" alt="Mendoza">
+        <img id="slide4" src="img/Slider/slider4-regSur.png" alt="Ushuaia">
+      </div>
+      <div class="button-slider">
+        <a href="#slide1"></a>
+        <a href="#slide2"></a>
+        <a href="#slide3"></a>
+        <a href="#slide4"></a>
+      </div>
+    </div>
+    <div class="container">
+      <section class="presentacion">
+        <h2>Un destino apasionante</h2>
+        <p>Viajar por Argentina es sumergirse en un mundo de pasiones. Una de las pasiones turísticas más convocantes en
+          nuestro país es la de saborear nuestras comidas, los asados y los exquisitos vinos.</p>
+        <p>Por eso, en este espacio queremos facilitarte el camino y guiarte a los mejores lugares que nuestros cuatro
+          puntos cardinales tienen para ofrecer.</p>
+        <p>Desde el comienzo vas a empezar a disfrutar de los colores y sabores con solo ver las imágenes.</p>
+        <p>Nuestro objetivo en esta web es que puedas recorrer el Norte, el Este, el Oeste y el Sur de la Argentina a
+          través de sus paisajes y su gastronomía.</p>
+        <p>Te vamos a mostrar las recetas de las comidas regionales más destacadas de nuestro país, vas a poder saber
+          qué
+          ingredientes llevan y cuáles son los pasos a seguir para prepararlas.</p>
+        <p>Además, te invitamos a conocer en qué restaurantes te recomendamos degustarlas, con reseñas y valoración de
+          puntaje.</p>
+      </section>
+      <section>
+        <article class="quienes-somos">
+          <h2>Nosotros</h2>
+          <div class="separator"></div>
+          <p>Somos un grupo de estudiantes de Codo a Codo apasionado por la programación y por nuestro país y nuestra
+            cultura, especialmente de nuestras comidas regionales.</p>
+          <p>Nuestro proyecto nació como trabajo integrador del curso de diseño web.
+          </p>
+          <p> En el proceso de trabajo cada integrante del equipo se enfocó en una región de Argentina para
+            desarrollarla
+            con su estilo, siguiendo una consigna en común. </p>
+          <p>Finalmente unimos nuestros trabajos y creamos nuestra web final.</p>
+          <p>Si bien estamos dando nuestros primeros pasos, una de las metas que nos propusimos desde el inicio del
+            proyecto es su escalabilidad, agregando nuevas funcionalidades y creciendo para permitir al usuario
+            familiarizarse con un sitio intuitivo y fácil de navegar.</p>
+          <p>Pueden visitar nuestros perfiles en redes sociales para conocer más sobre cada uno de nosotros y completar
+            el
+            formulario para mantenernos en contacto.</p><br>
+          <div class="agradecimiento">
+            <p class="animate__animated animate__pulse">¡Gracias por visitarnos!</p>
+          </div>
+          <div class="linkedin-logos-container">
+            <div class="linkedin-column">
+              <a href="https://www.linkedin.com/in/mbelen-taborda" class="linkedin-link" target="_blank">
+                <img class="linkedin-logo" src="./img/linkedin.svg" alt="linkedin-logo">
+                María Belén Taborda
+              </a>
+              <a href="https://www.linkedin.com/in/salgueiro-ezequiel/" class="linkedin-link" target="_blank">
+                <img class="linkedin-logo" src="./img/linkedin.svg" alt="linkedin-logo">
+                Ezequiel Salgueiro
+              </a>
             </div>
-            <div>
-                <ul>
-                    <li><a href="">NORTE</a></li>
-                    <li><a href="">ESTE</a></li>
-                    <li><a href="">OESTE</a></li>
-                    <li><a href="">SUR</a></li>
-                </ul>
+            <div class="linkedin-column">
+              <a href="https://www.linkedin.com/in/lucia-caranfa" class="linkedin-link" target="_blank">
+                <img class="linkedin-logo" src="./img/linkedin.svg" alt="linkedin-logo">
+                Lucía Paula Denise Caranfa
+              </a>
+              <a href="https://www.linkedin.com/in/erica-fabbro-532b017" class="linkedin-link" target="_blank">
+                <img class="linkedin-logo" src="./img/linkedin.svg" alt="linkedin-logo">
+                Érica Fabbro
+              </a>
             </div>
-        </nav>
-    </header>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
 
-    <main>
-        <h1>Bienvenido a FoodTrips</h1>
-        <section>
-            <h2>Presentación del sitio</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet est commodi ea modi totam consequatur
-                perferendis, quae quia, sint quaerat voluptas accusamus aliquid cumque dolor atque, dolore beatae saepe
-                doloribus!</p>
-        </section>
-        <section>
-            <article>
-                <h2>Quiénes somos</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure exercitationem in assumenda
-                    reprehenderit
-                    voluptas? Dolore doloremque labore delectus? Harum consectetur repudiandae est a pariatur voluptatum
-                    tenetur beatae, dolorum ut? Quidem.</p>
-            </article>
-            <article>
-                <h2>Datos de contacto personales y linkedin</h2>
-            </article>
-        </section>
-    </main>
+  <footer id="footer">
+    <div class="footer_logos">
+      <div class="footer__logos">
+        <form id="contactForm" class="contact-form">
+          <div>
+            <h2>Datos de contacto</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-column-left">
+              <div class="inputs">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+              </div>
+              <div class="inputs">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required />
+              </div>
+              <div class="inputs">
+                <label for="category">Categoría:</label>
+                <select id="category" name="category" required>
+                  <option value="">Seleccione una categoría</option>
+                  <option value="consulta">Consulta</option>
+                  <option value="trabajo">Trabaja con nosotros</option>
+                  <option value="publicar">Quiero publicar un plato</option>
+                  <option value="restaurante">Quiero publicar mi restaurante</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-column-right">
+              <div class="inputs">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Dejanos tu mensaje..." required></textarea>
+              </div>
+              <div class="inputs">
+                <label for="upload" class="file-label">Subir archivo</label>
+                <input class="file-button" type="file" id="upload" name="upload" />
+                <span id="file-name" class="file-name">No se ha seleccionado ningún archivo</span>
+              </div>
+              <div class="inputs input-checkbox">
+                <label class="input-checkbox-label" for="agree">
+                  <input type="checkbox" id="agree" name="agree" required />
+                  <span class="custom-checkbox"></span>
+                  Acepto los términos y condiciones
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
 
-    <footer>
-        <div>
-            <img src="" alt="logo Codo a Codo">
+      <div class="footer_main">
+        <div class="footer_main_codoacodo">
+          <a class="logo-text-link" href="https://buenosaires.gob.ar/educacion/codo-codo-40" target="_blank">
+            <img alt="Agencia de Aprendizaje a lo largo de la vida" src="./img/LogoCODOACODO.png" />
+            <p class="logo-text">
+              Agencia de Aprendizaje <br />
+              a lo largo de la vida
+            </p>
+          </a>
         </div>
-        <div>
-            <h3>Formulario de contacto</h3>
+        <div class="footer_links">
+          <div class="footer_links_col">
+            <h4 class="footer_links_title">Las Regiones</h4>
+            <ul class="footer_links_list">
+              <li class="Norte"><a href="./pages/norte.html">NORTE</a></li>
+              <li class="Este"><a href="./pages/este.html">ESTE</a></li>
+              <li class="Oeste"><a href="./pages/west.html">OESTE</a></li>
+              <li class="Sur"><a href="./pages/south.html">SUR</a></li>
+            </ul>
+          </div>
+          <div class="footer_links_col">
+            <div class="footer_links_social">
+              <h4 class="footer_links_title">Social</h4>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img alt="Facebook" src="./img/logoFacebook.png" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img alt="Instragram" src="./img/logoInstagram.png" />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img alt="Twitter" src="./img/logoTwitter.png" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div>
-            <h3>Datos de contacto de la web - instagram, mail, twitter, etc</h3>
-        </div>
-    </footer>
-
+      </div>
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

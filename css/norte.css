@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.region_top {
+    background-image: url(../img/Norte/Norte1.png);
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    padding: 180px 30px 160px 30px;
+    color: white;
+}
+
+.region_top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(169, 76, 30, 0.6);
+    z-index: -1;
+}
+
+.region_top_title {
+    font-size: 70px;
+    font-weight: 200;
+    color: rgb(248, 238, 226);
+}
+
+.region_top_title strong {
+    font-weight: 800;
+    color: rgb(248, 238, 226);
+}
+
+.region_top_text {
+    max-width: 800px;
+    margin: 0 auto
+}
+
+.region_top_text p {
+    font-family: "Roboto", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+
+.region {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 40px;
+    background: rgb(230, 230, 230);
+padding-bottom: 100px;
+}
+
+.region_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.region_item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.region_item_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 10px 35px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.region_item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0px;
+    transition: transform 0.1s ease;
+
+}
+
+
+.region_item h2 {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: black;
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    transition: transform 0.1s ease;
+}
+
+.region_item:hover h2 {
+    transform: scale(1.1);
+}
+
+.region_item strong {
+    font-weight: bold;
+    text-align: center;
+}
+
+#cabrito,
+#humita {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cabrito1,
+#humita1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*-------------------- MODAL -----------------------*/
+
+.modal {
+    font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    width: 300%;
+    max-width: auto;
+    height: 0vh;
+    float: inline-end;
+}
+
+#modalCabrito {
+    margin-top: 100px;
+    margin-left: 80%;
+}
+
+#modalEmpanadas {
+    padding-top: 70px;
+    margin-right: 260%;
+}
+
+#modalHumita {
+    margin-left: 80%;
+    bottom: 630px;
+}
+
+#modalLocro {
+    margin-right: 270%;
+    bottom: 580px;
+}
+
+
+.modal-content {
+    color: white;
+    font-size: 0.9em;
+    margin: 15% auto;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 800px;
+    position: relative;
+    overflow: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0));
+    border-radius: 0px 0px 15px 15px;
+}
+
+.modal-content h2 {
+    color: white;
+    font-size: 2em;
+    text-align: left;
+    font-weight: bold;
+    position: absolute;
+}
+
+
+.modal:target {
+    display: block;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 10;
+}
+
+.modal-content p {
+    text-align: left;
+    margin-top: 10%;
+    font-weight: bold;
+    padding: 0px 0px 0px 30px;
+    margin-bottom: 0px;
+
+}
+
+.modal_receta {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: left;
+    font-size: 0.9em;
+    margin-bottom: 100px;
+
+}
+
+.modal_receta li {
+    margin-bottom: 15px;
+}
+
+.modal_ingredientes {
+    width: 30%;
+    float: right;
+    border: 2px solid #ccc;
+    border-radius: 20px 0 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow:
+        -4px 0 4px rgba(0, 0, 0, 0.1),
+        0 4px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(39, 39, 39, 0.5);
+    text-align: left;
+    list-style: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+    height: 300px;
+    line-height: 1.5;
+
+}
+
+
+.modal_lugar {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 0px 0px 15px 15px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #48979e;
+
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0056b3;
+
+
+}
+
+.estrellas img {
+    width: 60px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.estrellas .puntaje {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(166, 148, 32, 0.5);
+    ;
+}
+
+.cerrar {
+    color: white;
+    text-decoration: none;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

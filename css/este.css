@@ -1,0 +1,506 @@
+.main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Roboto, serif;
+	margin-top: 90px;
+}
+
+.head {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.head .title-block {
+	position: absolute;
+	align-self: center;
+	text-align: center;
+	z-index: 2;
+	min-width: 800px;
+	max-width: 60%;
+	color: rgb(245, 245, 245);
+	font-family: Roboto Slab, serif;
+}
+
+.head .title-block h1 {
+	font-weight: 200;
+	margin-bottom: 36px;
+	font-size: 80px;
+}
+
+.head .title-block h1 .este {
+	font-weight: 800;
+}
+
+.head .title-block p {
+	font-size: 20px;
+}
+
+.color-block {
+	background-color: #69164e;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.5;
+}
+
+.head img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	animation: scaleImg 60s infinite ease-in-out;
+}
+
+@keyframes scaleImg {
+	0% {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.2);
+	}
+
+	90% {
+		transform: scale(1);
+	}
+}
+
+/* ------------------ grid container ------------------  */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 1em;
+	justify-items: center;
+	width: 80%;
+	font-family: Roboto Slab, serif;
+}
+
+@media only screen and (max-width: 1120px) {
+	.grid-container {
+		grid-template-columns: auto;
+	}
+}
+
+/* ------------------     card     -------------------  */
+
+.card-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 1.5vh 0;
+	margin-bottom: 12vh;
+	width: 450px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 4px;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3), 0 6px 12px 0 rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease;
+}
+
+.card-item:hover {
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-item .pic {
+	position: relative;
+	height: 80%;
+	border-radius: 10px 10px 0 0;
+	z-index: 1;
+}
+
+.card-item .pic img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.3s ease;
+}
+
+.card-item .pic:hover img {
+	transform: scale(1.1);
+}
+
+.card-item .pic:hover .overlay {
+	opacity: 1;
+}
+
+.plato {
+	width: 100%;
+	height: 20%;
+	align-content: center;
+	text-align: center;
+	z-index: 3;
+	font-size: 14px;
+	background-color: rgb(26, 27, 27);
+}
+
+.card-item .pic:hover .besugo {
+	transform: scale(1.1);
+}
+
+/* ------------------ grid card item overlay ------------------  */
+
+.card-item .overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 45%);
+	color: rgb(245, 245, 245);
+	padding: 12px;
+	border-radius: 8px;
+	z-index: 3;
+	cursor: pointer;
+	opacity: 0;
+	transition: all 0.3s ease 0.1s;
+	scale: 1;
+}
+
+.card-item .overlay:hover {
+	padding: 16px;
+	backdrop-filter: blur(1.5px);
+	font-size: 17.5px;
+}
+
+/* ------------------ modal ------------------ */
+.modal {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	z-index: 999;
+}
+
+.modal-background-blurred {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+}
+
+.close {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	color: #fff;
+	float: right;
+	scale: 2;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: rgb(255, 76, 76);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ----------- modal: contenido ----------- */
+.modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(rgba(111, 111, 111, 0.667), rgb(0, 0, 0));
+	color: rgb(245, 245, 245);
+	margin: 0 auto;
+	padding: auto 20px;
+	border-radius: 10px;
+	width: 800px;
+	height: 600px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: justify;
+	font-family: "Roboto Slab", sans-serif;
+}
+
+.modal-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.modal-titulo {
+	font-weight: 600;
+	font-size: 48px;
+	text-align: center;
+	padding: 8px 0;
+	background-color: #a42379a3;
+}
+
+.receta {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto 0;
+}
+
+.preparacion-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 320px;
+	overflow-y: scroll;
+	padding-right: 16px;
+}
+
+#flechita-preparacion {
+	bottom: 290px;
+	left: 420px;
+}
+
+#flechita-ingredientes {
+	bottom: 290px;
+	left: 820px;
+}
+
+#flechita-preparacion,
+#flechita-ingredientes {
+	transition: all 0.3s ease;
+	position: fixed;
+	cursor: default;
+	width: 14px;
+	height: 10px;
+	fill: none;
+	stroke: #bebebe;
+	stroke-width: 2px;
+	scale: 1.25;
+}
+
+#flechita:hover {
+	stroke: #ffffff;
+}
+
+.preparacion-container h1 {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.preparacion li {
+	margin-bottom: 8px;
+}
+
+.ingredientes-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #00000027;
+	border-left: 1px solid #f6f6f6;
+	border-bottom: 1px solid #f6f6f6;
+	width: 250px;
+	height: auto;
+	max-height: 300px;
+	font-size: 12px;
+	border-radius: 12px 0 12px 0;
+	overflow-y: auto;
+}
+
+.ingredientes-container h1 {
+	margin-bottom: 12px;
+}
+
+.receta-empanadas .ingredientes-container {
+	align-items: flex-start;
+	padding: 0 16px;
+}
+
+.receta-empanadas .ingredientes-container h1 {
+	align-self: center;
+}
+
+.receta-rabas .ingredientes-container h1 {
+	justify-self: center;
+}
+
+.ingredientes-container li {
+	list-style-type: none;
+}
+
+.ingredientes {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 8px;
+}
+
+.separador {
+	border-left: 1px solid #6f6f6f;
+	height: 200px;
+}
+
+.modal-footer {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 0 16px;
+	justify-content: space-between;
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 900;
+	color: rgb(33, 33, 33);
+	background-color: #f6f6f6;
+}
+
+.modal-footer .separador {
+	height: 70px;
+	border-left: 1px solid #292929;
+}
+
+.catado,
+.ubicacion {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 16px;
+}
+
+.puntaje {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 16px;
+	font-size: 24px;
+}
+
+.catado a {
+	color: #a4237a;
+	text-decoration: none;
+}
+
+.catado a:hover {
+	color: hsl(320, 65%, 49%);
+}
+
+.catado a:active {
+	color: hsl(320, 65%, 39%);
+}
+
+.receta-empanadas h1,
+.receta-besugo h1 {
+	margin-bottom: 8px;
+}
+
+.receta-mariscos li,
+.receta-rabas li,
+.receta-besugo li {
+	margin-bottom: 8px;
+}
+
+.receta-empanadas ul {
+	margin-bottom: 8px;
+}
+
+.receta-mariscos,
+.receta-rabas,
+.receta-empanadas,
+.receta-besugo {
+	padding: 1em 1.2em;
+}
+
+.receta-besugo .ingredientes {
+	margin: 16px 0;
+}
+
+.receta-besugo h2 {
+	margin: 32px 0 8px 0;
+}
+
+.receta-besugo p {
+	margin: 0 0 16px 0;
+}
+
+/* ----------- modal: scrollbar ----------- */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: #353535;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #5e5e5e;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #6f6f6f;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: hsl(0, 0%, 49%);
+}
+
+/* ------------------ modo dia ------------------ */
+.block-light-dark {
+	display: flex;
+	position: sticky;
+	top: 90px;
+	width: 100%;
+	background-color: #1a1b1b;
+	justify-content: center;
+	color: white;
+	z-index: 99;
+}
+
+.light-dark-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 200px;
+	justify-content: space-evenly;
+	user-select: none;
+}
+
+.light-dark-container span:nth-child(2) {
+	cursor: default;
+}
+
+/* texto del iconito */
+.light-dark-container .light-dark-text {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 auto;
+	cursor: pointer;
+	width: 100px;
+	text-align: center;
+}
+
+/* iconito */
+.toggle-mode {
+	margin: 8px;
+	font-size: 12px;
+	cursor: pointer;
+	width: 100px;
+	text-align: center;
+}
+
+.dark-mode {
+	background-color: rgb(26, 27, 27);
+	color: rgb(245, 245, 245);
+}
+
+.light-mode {
+	background-color: rgb(245, 245, 245);
+	color: rgb(26, 27, 27);
+}
