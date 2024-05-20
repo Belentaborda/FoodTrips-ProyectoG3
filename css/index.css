@@ -781,6 +781,7 @@ ul {
     padding-bottom: 150px;
     padding-top: 100px;
     cursor: default;
+    text-align: center;
 }
 
 .presentacion,
@@ -800,7 +801,6 @@ ul {
 
 .presentacion p {
     font-family: "Roboto", sans-serif;
-    ;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -844,11 +844,6 @@ ul {
 
 .quienes-somos:hover {
     transform: translate(0px, -25px);
-}
-
-h2,
-p {
-    text-align: center;
 }
 
 @media screen and (max-width: 768px) {

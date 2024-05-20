@@ -57,7 +57,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover {
-    color: #7d8e39;
+    color: #21be36;
 }
 
 .navbarListBoxes .Norte a {
@@ -73,7 +73,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste a {
-    color: #7d8e39;
+    color: #21be36;
 }
 
 .navbarListBoxes .navList a:hover {
@@ -99,7 +99,7 @@ ul .navList {
 .navbarListBoxes .navList:hover::after {
     content: '';
     position: absolute;
-    bottom: -35px;
+    bottom: -36px;
     left: 0;
     width: 100%;
     height: 30%;
@@ -118,7 +118,7 @@ ul .navList {
 }
 
 .navbarListBoxes .Oeste:hover::after {
-    background-color: #7d8e39;
+    background-color: #21be36;
 }
 
 li a {
@@ -158,7 +158,6 @@ li a {
 body {
     position: relative;
     font-family: "Roboto Slab", serif;
-    text-align: center;
     background-color: rgb(241, 243, 244);
 }
 
@@ -624,11 +623,11 @@ ul {
 }
 
 .Oeste a {
-    color: rgb(125, 142, 57);
+    color: #21be36;
 }
 
 .Oeste a:visited {
-    color: rgb(125, 142, 57);
+    color: #21be36;
 }
 
 .Sur a {
