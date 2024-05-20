@@ -6,7 +6,7 @@
 body {
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
-    
+
 }
 
 .logo {
@@ -106,7 +106,7 @@ ul .navList {
 .navbarListBoxes .navList:hover::after {
     content: '';
     position: absolute;
-    bottom: -35px;
+    bottom: -36px;
     left: 0;
     width: 100%;
     height: 30%;
@@ -777,84 +777,144 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color:#2d2e30;;
-  }
-  
-  .presentacion, .quienes-somos {
-    width: calc(70% - 10px); 
+    background-color: #2d2e30;
+    padding-bottom: 150px;
+    padding-top: 100px;
+    cursor: default;
+}
+
+.presentacion,
+.quienes-somos {
+    margin: 20px;
     padding: 50px;
     box-sizing: border-box;
-    margin-left: 10%;
     font-family: "Roboto Slab", Helvetica, "Segoe UI", sans-serif;
     color: #d4cfb9;
-  }
-  .presentacion h2{
+}
+
+.presentacion h2 {
     margin-bottom: 30px;
     font-weight: bold;
-    font-size: 2em;
-  }
-.presentacion p{
-    font-size: 1.1em;
+    font-size: 4em;
+}
+
+.presentacion p {
+    font-family: "Roboto", sans-serif;
+    ;
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
-  .quienes-somos {
-    border: #2d2e30;;
+
+.quienes-somos {
+    border: #2d2e30;
     border-radius: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin-top: 3%;
-    margin-left: 20%;
-    background-color:#d2781ef4
-  }
-  
-  .quienes-somos h2{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.9s ease;
+    margin-top: 8%;
+    width: 90%;
+    background-color: #9a530df4
+}
+
+.quienes-somos h2 {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 5%;
     text-transform: uppercase;
-  }
+}
 
-.separator{
+.separator {
     border-bottom: 2px solid #d4cfb9;
     width: 60px;
     margin: 0 auto;
     margin-bottom: 5%;
 }
 
-.quienes-somos p{
-    font-size: 0.9em;
+.quienes-somos p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
     margin-bottom: 10px;
     margin-top: 2%;
-    
 }
 
-.agradecimiento{
+.agradecimiento {
     color: #2d2e30;
-    font-weight: bold;    
+    font-weight: bold;
+    font-size: 1.6em;
 }
 
-  .quienes-somos:hover {
-    transform: translate(15px, -15px);
-  }
-  
-  h2, p {
-    text-align: center; 
-  }
-  
-  @media screen and (max-width: 768px) {
+.quienes-somos:hover {
+    transform: translate(0px, -25px);
+}
+
+h2,
+p {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
     .container {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
-  
+
     .quienes-somos {
-      margin-bottom: 10%;
-      margin-left: 10%;
+        margin-bottom: 10%;
+        margin-left: 5%;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     .container {
-      padding: 0 10px;
+        padding: 0px 10px 100px 10px;
     }
-  }
+}
+
+.linkedin-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Roboto", sans-serif;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.linkedin-logos-container img {
+    width: 25px;
+    height: 25px;
+}
+
+.linkedin-logos-container a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.linkedin-logos-container a:hover {
+    color: #c6c6c6;
+}
+
+.linkedin-column {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.linkedin-logo {
+    margin-right: 5px;
+}
+
+.quienes-somos .animate__animated {
+    animation: none;
+}
+
+.quienes-somos:hover .animate__animated {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
