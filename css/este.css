@@ -275,7 +275,7 @@
 
 #flechita-preparacion,
 #flechita-ingredientes {
-	transition: all .3s ease;
+	transition: all 0.3s ease;
 	position: fixed;
 	cursor: default;
 	width: 14px;
@@ -341,7 +341,7 @@
 	margin-bottom: 8px;
 }
 
-.separator {
+.separador {
 	border-left: 1px solid #6f6f6f;
 	height: 200px;
 }
@@ -358,7 +358,7 @@
 	background-color: #f6f6f6;
 }
 
-.modal-footer .separator {
+.modal-footer .separador {
 	height: 70px;
 	border-left: 1px solid #292929;
 }
@@ -382,7 +382,7 @@
 }
 
 .catado a {
-	color: #A4237A;
+	color: #a4237a;
 	text-decoration: none;
 }
 
